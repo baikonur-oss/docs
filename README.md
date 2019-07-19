@@ -43,7 +43,7 @@ Refer to examples in repositories, and don't forget to use proper [versioning](h
 ## Contributing
 PRs, issues, and any other form of feedback is very welcome in all repositories under baikonur-oss organization! :smile:
 
-If you have a module you would like to propose to Baikonur, let us know in Issues of this repository.
+If you have a module you would like to donate to Baikonur, let us know in Issues of this repository.
 
 <!-- Maintainers and contributors wanted! -->
 
