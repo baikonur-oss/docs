@@ -18,7 +18,7 @@ We are releasing select most popular and unique modules in this organization.
 Baikonur project name comes from [Baikonur Cosmodrome](https://en.wikipedia.org/wiki/Baikonur_Cosmodrome), 
 a spaceport located in Kazakhstan known for launching the first artificial satellite and the first human spaceflight.
 
-Modules published here are also released to Terraform Public Module Registry: [Baikonur top page](https://registry.terraform.io/modules/baikonur-oss).
+Modules released here are also published to Terraform Public Module Registry: [Baikonur top page](https://registry.terraform.io/modules/baikonur-oss).
 
 ## Usage
 Follow instructions in repository READMEs or [Terraform Module Registry pages](https://registry.terraform.io/modules/baikonur-oss).
