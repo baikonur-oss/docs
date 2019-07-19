@@ -17,7 +17,7 @@ You must install the following tools:
 
 To checkout this repository:
 
-1. Create your own [folk of this repository](https://help.github.com/articles/fork-a-repo/)
+1. Create your own [fork of a repository](https://help.github.com/articles/fork-a-repo/)
 1. Clone it into your local machine:
 
 ```bash
