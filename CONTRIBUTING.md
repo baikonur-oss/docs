@@ -31,7 +31,7 @@ The release process for new module goes something like this:
 1. Put v0.0.1 tag on **PR branch**
 1. Register module with Terraform Registry
 1. Check the appearance of modules in Terraform Registry
-1. Additional E2E test or something using codes tagged with v0.1.0 if needed
+1. Additional E2E, unit tests (with additional v0.0.x releases if needed)
 1. Get approval and merge it into master
 1. Put v1.0.0 tag on **master branch**
 1. Delete pre-release tags (v0.0.1, v0.0.2, ...)
