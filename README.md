@@ -30,7 +30,7 @@ Refer to examples in repositories, and don't forget to use proper [versioning](h
   - [iam-nofile](https://github.com/baikonur-oss/terraform-aws-iam-nofile) - module to make creating AWS IAM Roles easier. You can write role policy document with inline(heredoc) syntax, so you do not have to use [template rendering](https://www.terraform.io/docs/providers/template/d/file.html) in order to use variables.
 
   - Modules for logging with Kinesis and Lambda
-    - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to_fluent) - Kinesis Data Streams -> Fluent transfer
+    - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) - Kinesis Data Streams -> Fluent transfer
     - [lambda-kinesis-to-s3](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to_s3) - Kinesis Data Streams -> S3 transfer
     - [lambda-kinesis-to-es](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to_es) - Kinesis Data Streams -> Elasticsearch transfer
     - [lambda-es-cleaner](https://github.com/baikonur-oss/terraform-aws-lambda-es_cleaner) - Old indices cleaner for Elasticsearch Service
