@@ -34,7 +34,7 @@ We recommend to add the `upstream` remote for regulary [syncing your fork](https
 Activate the pre-commit hook and have the following benefits before committing the changes:
 
 - Apply terraform format
-- Automatically generate inputs/outputs doc sections based on the declarations in variables/outputs files
+- Automatically generate inputs/outputs doc sections in README based on variables, outputs declarations
 
 ```bash
 cd ${BAIKONUR_MODULE_NAME}
