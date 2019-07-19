@@ -20,7 +20,7 @@ Before submitting a PR, make sure that there's an issue filed for your work. It 
 The release process for existing module goes something like this:
 
 1. Make sure the direction for addressing the issues under discussion
-1. Accept a PR and review immpementation
+1. Accept a PR and review implementation
 1. Additional E2E test or something using codes within the branch
 1. Get approval and merge it into master
 1. Increce version number on **master branch**
