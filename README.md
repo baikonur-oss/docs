@@ -32,7 +32,7 @@ Refer to examples in repositories, and don't forget to use proper [versioning](h
   - Modules for logging with Kinesis and Lambda
     - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) - Kinesis Data Streams -> Fluent transfer
     - [lambda-kinesis-to-s3](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to_s3) - Kinesis Data Streams -> S3 transfer
-    - [lambda-kinesis-to-es](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to_es) - Kinesis Data Streams -> Elasticsearch transfer
+    - [lambda-kinesis-to-es](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-es) - Kinesis Data Streams -> Elasticsearch transfer
     - [lambda-es-cleaner](https://github.com/baikonur-oss/terraform-aws-lambda-es-cleaner) - Old indices cleaner for Elasticsearch Service
     - [lambda-kinesis-forward](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-forward) - Kinesis Data Streams -> Kinesis Data Streams forwarder/router module
 
