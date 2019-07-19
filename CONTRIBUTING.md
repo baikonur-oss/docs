@@ -1,10 +1,10 @@
 # Contributing
 
-This doc explains how to get started contributing to [baikonur-oss](https://github.com/baikonur-oss) project.
+This doc explains how to get started contributing to [Baikonur](https://github.com/baikonur-oss) project.
 
 ## Filing an Issue
 
-If you are trying to use baikonur-oss modules and run into some issues, please file an issue. We can look into the issue more easily if you describe in details as possible as you can. The following is example detailed descriptions:
+If you are trying to use Baikonur modules and run into some issues, please file an issue. We can look into the issue more easily if you describe in details as possible as you can. The following is example detailed descriptions:
 
 - Version of tools and modules
 - Expected and actual results
@@ -13,17 +13,17 @@ If you are trying to use baikonur-oss modules and run into some issues, please f
 
 ## Submitting a PR
 
-Before submitting a PR, make sure that there's an issue filed for your work. It might need some discussion before addressing the issue. Filing a issue first will help us to save your time to solving misunderstandings between you and us.
+PRs are welcome! Submitting an issue and discussing is a good practice, so feel free to open new issues. Baikonur project is young, and we still have to figure out guidelines etc., so submitting an issue prior to submitting a PR might be better.
 
 ## Releasing
 
-The release process for existing module goes something like this:
+The release process is as follows:
 
-1. Make sure the direction for addressing the issues under discussion
-1. Accept a PR and review implementation
-1. Additional E2E testing  (or unit tests etc. when available) with code on the PR branch. For Lambda modules, build packages from scratch and test.
+<!--1. Make sure the direction for addressing the issues under discussion-->
+1. Accept a PR and review immpementation
+1. Additional E2E test or something using codes within the branch
 1. Get approval and merge it into master
-1. Increce version number on **master branch**
+1. Create a new incremented release from releases page and upload Lambda package named `lambda_package.zip`
 
 The release process for new module goes something like this:
 
@@ -34,4 +34,5 @@ The release process for new module goes something like this:
 1. Additional E2E, unit tests (with additional v0.0.x releases if needed)
 1. Get approval and merge it into master
 1. Put v1.0.0 tag on **master branch**
+1. Create an initial release from release page and upload Lambda package named `lambda_package.zip`
 1. Delete pre-release tags (v0.0.1, v0.0.2, ...)

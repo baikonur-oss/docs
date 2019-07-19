@@ -21,8 +21,6 @@ To checkout this repository:
 1. Clone it into your local machine:
 
 ```bash
-mkdir baikonur-oss
-cd baikonur-oss
 git clone git@github.com:${YOUR_GITHUB_USERNAME}/${BAIKONUR_MODULE_NAME}.git
 cd ${BAIKONUR_MODULE_NAME}
 git remote add upstream git@github.com:baikonur-oss/${BAIKONUR_MODULE_NAME}.git
@@ -39,5 +37,6 @@ Activate the pre-commit hook and have the following benefits before committing t
 - Automatically generate inputs/outputs doc sections based on the declarations in variables/outputs files
 
 ```bash
+cd ${BAIKONUR_MODULE_NAME}
 pre-commit install
 ```
