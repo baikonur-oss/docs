@@ -21,7 +21,7 @@ The release process for existing module goes something like this:
 
 1. Make sure the direction for addressing the issues under discussion
 1. Accept a PR and review implementation
-1. Additional E2E test or something using codes within the branch
+1. Additional E2E testing  (or unit tests etc. when available) with code on the PR branch. For Lambda modules, build packages from scratch and test.
 1. Get approval and merge it into master
 1. Increce version number on **master branch**
 
