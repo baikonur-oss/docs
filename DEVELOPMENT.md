@@ -31,7 +31,7 @@ git remote set-url --push upstream no_push
 
 We recommend to add the `upstream` remote for regulary [syncing your fork](https://help.github.com/articles/syncing-a-fork/).
 
-## Activate the pre-commit hook
+## Install pre-commit hooks
 
 Activate the pre-commit hook and have the following benefits before committing the changes:
 
