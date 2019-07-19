@@ -27,7 +27,7 @@ Refer to examples in repositories, and don't forget to use proper [versioning](h
 ## Modules
 
 - AWS
-  - [iam-nofile](https://github.com/baikonur-oss/terraform-aws-iam-nofile) - module to make creating AWS IAM Roles easier. You can write role policy document with inline(heredoc) syntax, so you do not have to use [template rendering](https://www.terraform.io/docs/providers/template/d/file.html) in order to use variables.
+  - [iam-nofile](https://github.com/baikonur-oss/terraform-aws-iam-nofile) - module to make it easier to create AWS IAM Roles. You can write role policy document with inline(heredoc) syntax, so you do not have to use [template rendering](https://www.terraform.io/docs/providers/template/d/file.html) in order to use variables.
 
   - Modules for logging with Kinesis and Lambda
     - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) - Kinesis Data Streams -> Fluent transfer
