@@ -13,7 +13,7 @@ Welcome to Baikonur!
 Baikonur is an open source [Terraform Modules](https://www.terraform.io/docs/modules/usage.html) project by [CyberAgent, Inc.](https://www.cyberagent.co.jp/en/) 
 
 Baikonur started as an internal project in 2018, and quickly grew to over 50 modules.
-We are releasing select most popular and unique modules in this organization.
+We are releasing select most popular and unique modules here.
 
 Baikonur project name comes from [Baikonur Cosmodrome](https://en.wikipedia.org/wiki/Baikonur_Cosmodrome), 
 a spaceport located in Kazakhstan known for launching the first artificial satellite and the first human spaceflight.
@@ -24,10 +24,13 @@ Modules released here are also published to Terraform Public Module Registry: [B
 Follow instructions in repository READMEs or [Terraform Module Registry pages](https://registry.terraform.io/modules/baikonur-oss).
 Refer to examples in repositories, and don't forget to use proper [versioning](https://www.terraform.io/docs/configuration/modules.html#module-versions).
 
-## Modules
+## Modules and tools
 
 - AWS
   - [iam-nofile](https://github.com/baikonur-oss/terraform-aws-iam-nofile) - module to make it easier to create AWS IAM Roles. You can write role policy document with inline(heredoc) syntax, so you do not have to use [template rendering](https://www.terraform.io/docs/providers/template/d/file.html) in order to use variables.
+
+  - ECS modules
+    - [fargate-scheduled-task](https://github.com/baikonur-oss/terraform-aws-fargate-scheduled-task) - Create ECS scheduled tasks with CloudWatch Events easily (for batch apps, or anything else that runs on routine)
 
   - Modules for logging with Kinesis and Lambda
     - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) - Kinesis Data Streams -> Fluent transfer
@@ -35,6 +38,12 @@ Refer to examples in repositories, and don't forget to use proper [versioning](h
     - [lambda-kinesis-to-es](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-es) - Kinesis Data Streams -> Elasticsearch transfer
     - [lambda-es-cleaner](https://github.com/baikonur-oss/terraform-aws-lambda-es-cleaner) - Old indices cleaner for Elasticsearch Service
     - [lambda-kinesis-forward](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-forward) - Kinesis Data Streams -> Kinesis Data Streams forwarder/router module
+
+  - eden (ECS Dynamic Environment Manager)
+    - [aws-eden-cli](https://github.com/baikonur-oss/aws-eden-cli) - eden CLI
+    - [lambda-eden-api](https://github.com/baikonur-oss/terraform-aws-lambda-eden-api) - eden API on Lambda
+    - [aws-eden-core](https://github.com/baikonur-oss/aws-eden-core) - eden core package (shared between CLI and API)
+    
 
 - GCP
   - coming soon
