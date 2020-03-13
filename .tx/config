@@ -7,3 +7,9 @@ source_file = docs/source/_build/gettext/index.pot
 source_lang = en
 type = PO
 
+[baikonur-docs.README]
+file_filter = README-<lang>.md
+source_file = README.md
+source_lang = en
+type = GITHUBMARKDOWN
+
