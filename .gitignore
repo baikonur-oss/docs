@@ -10,3 +10,6 @@
 *.tfstate*
 terraform.tfstate
 terraform.tfvars
+
+# Sphinx documentation
+docs/source/_build/html
