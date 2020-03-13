@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CyberAgent, Inc.
+# This file is distributed under the same license as the Baikonur package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tamirlan Torgayev <torgayev@me.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Baikonur\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-13 19:43+0900\n"
+"PO-Revision-Date: 2020-03-13 10:58+0000\n"
+"Last-Translator: Tamirlan Torgayev <torgayev@me.com>, 2020\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/baikonur/teams/108107/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../index.rst:9
+msgid "Contents:"
+msgstr "目次:"
+
+#: ../../index.rst:7 c7297ac98f3949edbc7600e16fce4dfd
+msgid "Welcome to Baikonur's documentation!"
+msgstr "Baikonurドキュメンテーションへようこそ!"
+
+#: ../../index.rst:16 8dcb781056064dc5bde209e297521272
+msgid "Indices and tables"
+msgstr "目次と索引"
+
+#: ../../index.rst:18 d346aed046b24bc889e3402b7398d4a3
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:19 d8ebe7709db34482b9d382dd503d3317
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../index.rst:20 c0c07f50a03a4c66985e9bba870f3211
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
