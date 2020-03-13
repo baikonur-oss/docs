@@ -30,7 +30,7 @@ Refer to examples in repositories, and don't forget to use proper [versioning](h
   - [iam-nofile](https://github.com/baikonur-oss/terraform-aws-iam-nofile) - module to make it easier to create AWS IAM Roles. You can write role policy document with inline(heredoc) syntax, so you do not have to use [template rendering](https://www.terraform.io/docs/providers/template/d/file.html) in order to use variables.
 
   - ECS modules
-    - [fargate-scheduled-task](https://github.com/baikonur-oss/terraform-aws-fargate-scheduled-task) - Create ECS scheduled tasks with CloudWatch Events easily (for batch apps, or anything else that runs on routine)
+    - [fargate-scheduled-task](https://github.com/baikonur-oss/terraform-aws-fargate-scheduled-task) - Create ECS scheduled tasks with CloudWatch Events easily. Useful for batches and other logic that runs on fixed routine.
 
   - Modules for logging with Kinesis and Lambda
     - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) - Kinesis Data Streams -> Fluent transfer

@@ -27,10 +27,10 @@ Baikonur プロジェクトの名前は、人類初の人工衛星の打ち上�
   - [iam-nofile](https://github.com/baikonur-oss/terraform-aws-iam-nofile) - AWS IAMロールの作成をより簡単にするためのモジュール。インライン (heredoc) 構文でロールポリシーを記述できるため、[テンプレートレンダリング](https://www.terraform.io/docs/providers/template/d/file.html) を使用することなくポリシー内で変数を使うことが可能です。
 
   - ECSモジュール
-    - [fargate-scheduled-task](https://github.com/baikonur-oss/terraform-aws-fargate-scheduled-task) - Create ECS scheduled tasks with CloudWatch Events easily (for batch apps, or anything else that runs on routine)
+    - [fargate-scheduled-task](https://github.com/baikonur-oss/terraform-aws-fargate-scheduled-task) - Create ECS scheduled tasks with CloudWatch Events easily. Useful for batches and other logic that runs on fixed routine.
 
   - KinesisとLambdaを活用したロギングのためのモジュール
-    - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) Kinesis Data Streamsから Fluentエンドポイントへの転送 <!-- -->
+    - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) - Kinesis Data Streamsから Fluentエンドポイントへの転送 <!-- -->
     - [lambda-kinesis-to-s3](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-s3) - Kinesis Data StreamsからS3への保存 <!-- -->
     - [lambda-kinesis-to-es](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-es) - Kinesis Data Streamsから Elasticsearchへの格納 <!-- --> 
     - [lambda-es-cleaner](https://github.com/baikonur-oss/terraform-aws-lambda-es-cleaner) - Elasticsearch Serviceの古いインデックスを自動的に消すためのツール
