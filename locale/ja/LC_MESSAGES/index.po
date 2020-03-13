@@ -14,11 +14,11 @@ msgstr ""
 "POT-Creation-Date: 2020-03-13 19:43+0900\n"
 "PO-Revision-Date: 2020-03-13 10:58+0000\n"
 "Last-Translator: Tamirlan Torgayev <torgayev@me.com>, 2020\n"
-"Language-Team: Japanese (Japan) (https://www.transifex.com/baikonur/teams/108107/ja_JP/)\n"
+"Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja_JP\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../index.rst:9
