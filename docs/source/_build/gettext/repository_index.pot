@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CyberAgent, Inc.
+# This file is distributed under the same license as the Baikonur package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Baikonur \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-17 14:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../repository_index.rst:4
+#: 9c2f78363b904a609bb465d4f7748872
+msgid "Baikonur Project repository index"
+msgstr ""
+
+#: ../../repository_index.rst:9
+#: e97a6bd6d3484a5e9dc8875ddb04f5a0
+msgid ":ref:`baikonur_logging_top` Terraform Modules"
+msgstr ""
+
+#: ../../repository_index.rst:12
+#: 51b68cd2a7444ff389a8b2d84c6d4582
+msgid "lambda-kinesis-to-fluent_"
+msgstr ""
+
+#: ../../repository_index.rst:14
+#: 2ffff0fedcb14694b9fe65ea6cbddddd
+msgid "Transfer data from Kinesis Data Streams to Fluent endpoint"
+msgstr ""
+
+#: ../../repository_index.rst:17
+#: 2d57786dd3ce4d40ae3bec4ba898af05
+msgid "lambda-kinesis-to-s3_"
+msgstr ""
+
+#: ../../repository_index.rst:19
+#: b54be80674cf43abb04783f06b9229cf
+msgid "Save data from Kinesis Data Streams to S3"
+msgstr ""
+
+#: ../../repository_index.rst:22
+#: ba50fecda0084412acfccca732d4007b
+msgid "lambda-kinesis-to-es_"
+msgstr ""
+
+#: ../../repository_index.rst:24
+#: 902b71994d544dc49eba15966a6dc6b0
+msgid "Add data from Kinesis Data Streams to Elasticsearch"
+msgstr ""
+
+#: ../../repository_index.rst:27
+#: 1c1e44075be54196b4fb04514359152b
+msgid "lambda-es-cleaner_"
+msgstr ""
+
+#: ../../repository_index.rst:29
+#: d4659422d0e74919bbdbbc106cf193ab
+msgid "Automatically clean old indices in Elasticsearch Service"
+msgstr ""
+
+#: ../../repository_index.rst:32
+#: 3081581835db4b59852a8a99dc4efff6
+msgid "lambda-kinesis-forward_"
+msgstr ""
+
+#: ../../repository_index.rst:34
+#: e65cf3a911704ba7af2327fcc6d3abbe
+msgid "Kinesis Data Streams to Kinesis Data Streams forwarder/router module"
+msgstr ""
+
+#: ../../repository_index.rst:46
+#: 73ca448772e94277a1df1e351f421afb
+msgid ":ref:`eden_top`"
+msgstr ""
+
+#: ../../repository_index.rst:49
+#: 0bac7a7950be40d49840b292b3d898c1
+msgid "aws-eden-cli_"
+msgstr ""
+
+#: ../../repository_index.rst:50
+#: 228004b09da14ec1aaf414b7238eb0e7
+msgid "eden CLI"
+msgstr ""
+
+#: ../../repository_index.rst:53
+#: 1cee8a6795144da4a25ea257569b3e66
+msgid "lambda-eden-api_"
+msgstr ""
+
+#: ../../repository_index.rst:54
+#: 632670bc27db4b99b7d712165cd2e354
+msgid "eden API"
+msgstr ""
+
+#: ../../repository_index.rst:57
+#: 0a4f0de954bb49d9bfe8b83d560994b7
+msgid "Tools and libraries"
+msgstr ""
+
+#: ../../repository_index.rst:60
+#: 1abdbcfe56354365bac034118e50c99e
+msgid "amazon_kinesis_utils_"
+msgstr ""
+
+#: ../../repository_index.rst:61
+#: 17b0de54fd334de8abd39e8ae08603f7
+msgid "A Python library of useful utilities for Amazon Kinesis. Extensively used by repository_index_logging_."
+msgstr ""
+
+#: ../../repository_index.rst:64
+#: fa88e836c8a444a8af3bd9d0ea37f022
+msgid "aws-eden-core_"
+msgstr ""
+
+#: ../../repository_index.rst:65
+#: e0872dbb865c462b87658cd212e4c21c
+msgid "Internal library for repository_index_eden"
+msgstr ""
+
+#: ../../repository_index.rst:68
+#: f724300e6391412db571f8e451dd2cf3
+msgid "Other Terraform Modules for AWS"
+msgstr ""
+
+#: ../../repository_index.rst:71
+#: b52bbb01aa814a8fa34d88e035802649
+msgid "`iam-nofile`_"
+msgstr ""
+
+#: ../../repository_index.rst:73
+#: 91f03ac6d56e4062b76fb4a9ddb47df4
+msgid "Module to make it easier to create AWS IAM Roles. You can write role policy document with inline(heredoc) syntax, so you do not have to use `template rendering`_ to use variables."
+msgstr ""
+
+#: ../../repository_index.rst:81
+#: bab3d5c593634c86b8ae03117147d897
+msgid "`fargate-scheduled-task`_"
+msgstr ""
+
+#: ../../repository_index.rst:83
+#: d2182d73587845ceac26f56f3e60bb80
+msgid "Create ECS scheduled tasks with CloudWatch Events easily (for batch apps, or anything else that runs on routine)"
+msgstr ""

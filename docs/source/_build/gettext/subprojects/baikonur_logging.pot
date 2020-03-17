@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CyberAgent, Inc.
+# This file is distributed under the same license as the Baikonur package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Baikonur \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-17 14:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../subprojects/baikonur_logging.rst:4
+#: 78454b65bbf24ab3a6a2fae135254fc1
+msgid "Baikonur Logging with Amazon Kinesis and AWS Lambda"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:7
+#: e5b7036783404a59a3b0956b500ca58a
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:10
+#: bbdd00a3f7d641d5b9953c7e2d75c2fe
+msgid "Why Kinesis?"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:12
+#: 330a8b636d4a422796de16cc1a29dbd6
+msgid "Kinesis Data Streams is a high-throughput, low latency, fully managed service for working with streaming data."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:14
+#: d4b578b5138148e2bee22eb0188fc875
+msgid "A single shard provides `1 MB/s read and 2 MB/s write capacity <kinesis_quotas_>`_. Data added to a Kinesis Data Stream is kept on stream for a period of time specified in data retention period parameter. Thus, for capacity planning it is enough to know peak data throughput."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:19
+#: 56aa16613a1847bbb0190831839c09b9
+msgid "Kinesis Data Streams do not have auto-scaling capabilities. With `amazon-kinesis-scaling-utils`_ you can have your Kinesis Data Stream shards scale automatically."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:23
+#: f884afb55f544dab934acab36a722fdd
+msgid "Why Kinesis with Lambda?"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:25
+#: 2101c3e06a064a3087217ee1a9dcb4ce
+msgid "By using Lambda for processing data on Kinesis streams (with event source mapping), several good things happen:"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:27
+#: 61c60f71626e4eb29fa2a387033246db
+msgid "With Lambda, you do not have to manage servers etc."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:28
+#: 1f98f7d20a4346edb8bd2381b83334ca
+msgid "Lambda backend does position management for you: it keeps track of until what position on every shard data is already processed, and only updates position if Lambda finishes without errors."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:31
+#: 79f77a55d64c4d2fa723e36b9ceabaf7
+msgid "Moreover, you do not have to perform SubscribeToShard etc., every Lambda is executed with its' data batch to process in ``event`` object."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:33
+#: 26af2bb696c5458c943709768172f6ec
+msgid "If Lambda finishes with error, Lambda is restarted with the same batch until it succeeds or data is deleted (data retention period passes since data was added to stream). - No need to write retry logic in Lambda. Though, it may be a good idea to data that is failing after ``n`` retries and move on, so that data processing does not stop."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:38
+#: ca59ce676f6b4189894c76eed993789c
+msgid "Why use Kinesis and Lambda for logging?"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:40
+#: 3f419de404514c819d932dca6661acb3
+msgid "Kinesis and Lambda combo can be used as a solution to replace self-managed log clusters with a managed services, while still have control of how data is processed. By using Kinesis and Lambda it is possible to create a modular, extendable, scalable architecture. Log data transfer reliability may be improved as well: data written to a Kinesis stream successfully does not get lost."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:46
+#: ae57ec3cd4884ff6b489161a0960eff5
+msgid "Common Schema requirements"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:48
+#: 60d114f129364eec8994833def0b13eb
+msgid "\"Baikonur Logging with Amazon Kinesis and AWS Lambda\" can be defined as any architecture using Kinesis Data Streams in conjunction with one or more of the following Baikonur Lambda Modules:"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:51
+#: 626495d630384989ad96d83a3bfa09db
+msgid "terraform-aws-lambda-kinesis-forward_"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:52
+#: ff7dc48e56e74f4a9ceeeb0d545c5dcb
+msgid "terraform-aws-lambda-kinesis-to-es_"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:53
+#: c7f159acfdc34d258b6f12b479e67b19
+msgid "terraform-aws-lambda-kinesis-to-s3_"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:54
+#: ea9db35cb92345cf9a7fead553b9382e
+msgid "terraform-aws-lambda-kinesis-to-fluent_"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:56
+#: bde889c957754d7fb71fe5babd989121
+msgid "These modules have the following common schema requirements:"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:58
+#: 0852ecc58c9f4e25a722211a1087f8a9
+msgid "All data must be JSON, root type must be object"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:59
+#: 418a5ae133874273aed0ba10d9ed7447
+msgid "All data must include the following keys:"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:61
+#: 38afcc088415449ba50ec0d8a0313d26
+msgid "``log_type``: Log type identifier"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:62
+#: ce6638ffa6144146927c021bf7603dbf
+msgid "``log_id``: Any unique identifier (e.g. ``uuid.uuid4()``)"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:63
+#: 30f836da514b45ce8112301d33aa2f90
+msgid "``time``: Any timestamp supported by dateutil.parser.parse_"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:66
+#: 39e8b7e92344465fb66ec6443eb5d753
+msgid "Key names are customizable for each Lambda module"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:68
+#: 1b24674e9cab47beaadca9a9333d5c25
+msgid "Common schema requirements are derived from following needs:"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:70
+#: 1b80c73783c64c339d02b93105523471
+msgid "Easier parsing"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:71
+#: a0089370ebc24895af0c5e1eee6cf1ab
+msgid "Interoperability between different Lambda modules"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:73
+#: a8741ef4bc85477d802dc7bfe5884f30
+msgid "Different modules can be attached to a single Kinesis Data Stream and work on same data as long as data are JSON-objects and common schema requirements are met."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:76
+#: eaabaa37a758449f924a541413f60708
+msgid "Ability to create behaviour based on keys in common schema"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:78
+#: 1f76448d2fc34e70af8ab1ff76ba6229
+msgid "One of the most important features is ability to apply whitelist on ``log_type`` field to, for instance, ignore logs other than those specified."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:81
+#: d7d8020ea61247a3ac8b7f42832728c9
+msgid "``log_id`` and ``time`` keys are required by terraform-aws-lambda-kinesis-to-s3_ to ensure unique filenames, and terraform-aws-lambda-kinesis-to-es_ for creating daily index names in Elasticsearch (e.g. index-name-20200314). Additionally, these fields are useful when troubleshooting (e.g. searching for specific log event, digging into log data by time)."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:87
+#: e90ba4aac6af4bbc85750c4ebbbdcfdc
+msgid "As long as common schema requirements are met, this design pattern and modules mentioned here can be applied to any data transfer that needs to be fast and reliable, for example inter-microservice communication."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:91
+#: a7a655e5f5a3467c9fabf91b51a0c62e
+msgid "Architecture examples"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:94
+#: b25983d7e7364c8b8d6dbf780bdfa8be
+msgid "Single destination from single stream"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:96
+#: 32332b7bea9b44dc848586ed2d58c0a2
+msgid "Create a Kinesis Data Stream for each destination. For example, if we want to save all logs to S3 and only some of them to Elasticsearch, create two streams: for S3 and Elasticsearch. Add terraform-aws-lambda-kinesis-to-s3_ and terraform-aws-lambda-kinesis-to-es_ for the respective streams. Put logs to each::"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:107
+#: 9f5ffabbca104b858344d360da433d41
+msgid "Multiple destinations from single stream"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:109
+#: 6d7eb61199c24d7ab0dea5de097ec828
+msgid "In example above, we have to write logs we want to save to Elasticsearch to both streams. We can further improve this by adding terraform-aws-lambda-kinesis-to-s3_ to stream for Elasticsearch as well::"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:120
+#: 6e0db550c80248ffaaecc29e5e9061be
+msgid "Now we only write each log event once to either stream."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:125
+#: 7c2cb27f1ff14f049d263271adba72ae
+msgid "Kinesis routing pattern"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:127
+#: fe81a09d921a4830b94926afeb6086c6
+msgid "Write data to a single Kinesis stream (a \"router\"). Create multiple output streams, each for a destination. Forwarders (terraform-aws-lambda-kinesis-forward_) with whitelists can be used to create a `Publish-subscribe pattern`_-like architecture (topic is specified in type field, and each output stream is a subscription group)::"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:140
+#: fd92ffd6a3f845c5a8e9d1951a57e14e
+msgid "This pattern may also be useful for inter-microservice communication."
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:142
+#: c29c3e6584284cedb0df641ce86fec2a
+msgid "Each of output streams may have their own Lambda modules or subscribers. For example::"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:155
+#: 62395600597b4b5cbfd1a3f0bf6eb819
+msgid "Kinesis routing pattern with CloudWatch Logs subscription filters"
+msgstr ""
+
+#: ../../subprojects/baikonur_logging.rst:157
+#: 66240234b42e452abd08da0ff07d4022
+msgid "In addition to kinesis_routing_pattern_, use CloudWatch Logs subscription filters to input data to \"router\" stream. Doing so will free you from having to write PutRecord/PutRecords logic in your application if you already output logs to CloudWatch. For instance, if you are using ``awslogs`` logging driver in ECS, using subscription filter will look like::"
+msgstr ""

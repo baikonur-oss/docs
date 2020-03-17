@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-13 19:43+0900\n"
+"POT-Creation-Date: 2020-03-17 14:44+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,32 +16,77 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../index.rst:9
-#: 
-msgid "Contents:"
-msgstr ""
-
 #: ../../index.rst:7
 #: c7297ac98f3949edbc7600e16fce4dfd
-msgid "Welcome to Baikonur's documentation!"
+msgid "Welcome to Baikonur!"
 msgstr ""
 
-#: ../../index.rst:16
+#: ../../index.rst:17
+#: 33114609f6f44dd6a198362cddd7ade6
+msgid "What is Baikonur?"
+msgstr ""
+
+#: ../../index.rst:19
+#: 9b8837026c1144449fa7272684a2e033
+msgid "Baikonur is an open source project that includes `Terraform Modules`_, knowledge base, various infrastructure tools and more."
+msgstr ""
+
+#: ../../index.rst:22
+#: 621068996dcc4813abca43e6f436e219
+msgid "Baikonur started as an internal project at `CyberAgent, Inc.`_ in 2018, and quickly grew to over 50 modules. We started from open sourcing Baikonur started from releasing select most popular and unique internal Terraform Modules."
+msgstr ""
+
+#: ../../index.rst:25
+#: 9662b0bf666d4dbda4b5bc7e53ac0a4b
+msgid "Terraform Modules released here are also published to `Terraform Public Module Registry`_."
+msgstr ""
+
+#: ../../index.rst:28
+#: fe42787c3fdf4ab3bfa483c4c3fb9a8c
+msgid "Contents"
+msgstr ""
+
+#: ../../index.rst:43
+#: 67ae426e6ca04c7994f746bfca228cac
+msgid "License"
+msgstr ""
+
+#: ../../../../LICENSE:1
+#: 5d37fd2b41ed418daf0185443d387d17
+msgid "MIT License"
+msgstr ""
+
+#: ../../../../LICENSE:3
+#: 9d329fee02eb4940a319f77d930d8061
+msgid "Copyright (c) 2019 CyberAgent, Inc."
+msgstr ""
+
+#: ../../../../LICENSE:5
+#: 7d3f06af6ea249a7b7cc9a30e2ecb2fe
+msgid "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:"
+msgstr ""
+
+#: ../../../../LICENSE:12
+#: 4436ce9e108f4bf389f69b7ff07e2018
+msgid "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+msgstr ""
+
+#: ../../../../LICENSE:15
+#: b4b78c01c9ec4f4d839af4a1146819b0
+msgid "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+msgstr ""
+
+#: ../../index.rst:47
 #: 8dcb781056064dc5bde209e297521272
 msgid "Indices and tables"
 msgstr ""
 
-#: ../../index.rst:18
+#: ../../index.rst:49
 #: d346aed046b24bc889e3402b7398d4a3
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../index.rst:19
-#: d8ebe7709db34482b9d382dd503d3317
-msgid ":ref:`modindex`"
-msgstr ""
-
-#: ../../index.rst:20
+#: ../../index.rst:50
 #: c0c07f50a03a4c66985e9bba870f3211
 msgid ":ref:`search`"
 msgstr ""

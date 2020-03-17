@@ -28,13 +28,11 @@ By using Lambda for processing data on Kinesis streams (with event source mappin
 2. Lambda backend does position management for you: it keeps track of until what position on every shard data is already
    processed, and only updates position if Lambda finishes without errors.
 
-   - Moreover, you do not have to perform SubscribeToShard etc., every Lambda is executed with its' data batch to
-     process in ``event`` object.
+   - Moreover, you do not have to perform SubscribeToShard etc., every Lambda is executed with its' data batch to process in ``event`` object.
 
 3. If Lambda finishes with error, Lambda is restarted with the same batch until it succeeds or data is deleted (data
    retention period passes since data was added to stream).
-    - No need to write retry logic in Lambda. Though, it may be a good idea to data that is failing after ``n`` retries
-      and move on, so that data processing does not stop.
+   - No need to write retry logic in Lambda. Though, it may be a good idea to data that is failing after ``n`` retries and move on, so that data processing does not stop.
 
 Why use Kinesis and Lambda for logging?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
