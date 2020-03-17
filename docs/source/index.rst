@@ -33,7 +33,9 @@ Contents
    faq
    repository_index
    knowledge_base/index
-   subprojects/index
+
+   subprojects/baikonur_logging
+   subprojects/eden
 
 
 

@@ -3,6 +3,8 @@
 Baikonur Project repository index
 =================================
 
+.. _repository_index_logging:
+
 :ref:`baikonur_logging_top` Terraform Modules
 ---------------------------------------------
 
@@ -37,9 +39,30 @@ Kinesis Data Streams to Kinesis Data Streams forwarder/router module
 .. _`lambda-es-cleaner`: https://github.com/baikonur-oss/terraform-aws-lambda-es-cleaner
 .. _`lambda-kinesis-forward`: https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-forward
 
+.. _repository_index_eden:
+
 
 :ref:`eden_top`
 ---------------
+
+aws-eden-cli_
+^^^^^^^^^^^^^
+eden CLI
+
+lambda-eden-api_
+^^^^^^^^^^^^^^^^
+eden API
+
+Tools and libraries
+-------------------
+
+amazon_kinesis_utils_
+^^^^^^^^^^^^^^^^^^^^^^
+A Python library of useful utilities for Amazon Kinesis. Extensively used by repository_index_logging_.
+
+aws-eden-core_
+^^^^^^^^^^^^^^
+Internal library for repository_index_eden
 
 Other Terraform Modules for AWS
 -------------------------------
@@ -67,3 +90,7 @@ Create ECS scheduled tasks with CloudWatch Events easily (for batch apps, or any
 .. _`template rendering`: https://www.terraform.io/docs/providers/template/d/file.html
 .. _`fargate-scheduled-task`: https://github.com/baikonur-oss/terraform-aws-fargate-scheduled-task
 .. _`iam-nofile`: https://github.com/baikonur-oss/terraform-aws-iam-nofile
+.. _`amazon_kinesis_utils`: https://github.com/baikonur-oss/amazon-kinesis-utils
+.. _`aws-eden-cli`: https://github.com/baikonur-oss/aws-eden-cli
+.. _`lambda-eden-api`: https://github.com/baikonur-oss/terraform-aws-lambda-eden-api
+.. _`aws-eden-core`: https://github.com/baikonur-oss/aws-eden-core

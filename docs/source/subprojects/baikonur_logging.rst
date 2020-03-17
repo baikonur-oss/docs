@@ -3,8 +3,8 @@
 Baikonur Logging with Amazon Kinesis and AWS Lambda
 ===================================================
 
-Prerequisite
-------------
+Prerequisites
+-------------
 
 Why Kinesis?
 ^^^^^^^^^^^^
