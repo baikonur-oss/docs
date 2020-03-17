@@ -13,3 +13,33 @@ source_file = README.md
 source_lang = en
 type = GITHUBMARKDOWN
 
+[baikonur-docs.docs_source__build_gettext_faq]
+file_filter = locale/<lang>/LC_MESSAGES/faq.po
+source_file = docs/source/_build/gettext/faq.pot
+source_lang = en
+type = PO
+
+[baikonur-docs.docs_source__build_gettext_repository_index]
+file_filter = locale/<lang>/LC_MESSAGES/repository_index.po
+source_file = docs/source/_build/gettext/repository_index.pot
+source_lang = en
+type = PO
+
+[baikonur-docs.docs_source__build_gettext_knowledge_base_index]
+file_filter = locale/<lang>/LC_MESSAGES/knowledge_base/index.po
+source_file = docs/source/_build/gettext/knowledge_base/index.pot
+source_lang = en
+type = PO
+
+[baikonur-docs.docs_source__build_gettext_subprojects_baikonur_logging]
+file_filter = locale/<lang>/LC_MESSAGES/subprojects/baikonur_logging.po
+source_file = docs/source/_build/gettext/subprojects/baikonur_logging.pot
+source_lang = en
+type = PO
+
+[baikonur-docs.docs_source__build_gettext_subprojects_eden]
+file_filter = locale/<lang>/LC_MESSAGES/subprojects/eden.po
+source_file = docs/source/_build/gettext/subprojects/eden.pot
+source_lang = en
+type = PO
+
