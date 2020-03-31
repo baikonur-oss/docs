@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 00:09+0900\n"
+"POT-Creation-Date: 2020-04-01 04:17+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,274 +217,294 @@ msgid "Environments JSON file example:"
 msgstr ""
 
 #: ../../subprojects/eden.rst:107
-#: e81fd46e2d9c4121ad81dd7810585ae0
-msgid "Example above presumes ``config_update_key = api_endpoint``. You can create environments with the same names, but with profiles with different ``config_update_key`` settings to have multiple endpoints within a single environment. For example, you may want to have an API, administration tool, and a frontend service created as a single environment."
+#: 09c58703a5f14bc28315a3d985aba2e0
+msgid "Example above presumes ``config_update_key = api_endpoint``."
 msgstr ""
 
-#: ../../subprojects/eden.rst:112
+#: ../../subprojects/eden.rst:109
+#: e81fd46e2d9c4121ad81dd7810585ae0
+msgid "You can create multiple environments with the same names, but with profiles with different ``config_update_key`` settings to have multiple endpoints within a single environment. For example, you may want to have an API, administration tool, and a frontend service created as a single environment."
+msgstr ""
+
+#: ../../subprojects/eden.rst:113
+#: d2b840e0eaea4f5fb7bc181d0b740309
+msgid "Let's say we have three profiles, ``api``, ``admin``, and ``frontend``. These profiles are pre-configured with ``config_update_key`` equal to ``api_endpoint``, ``admin_endpoint``, ``frontend_endpoint`` respectively."
+msgstr ""
+
+#: ../../subprojects/eden.rst:123
 #: a3763705087a4ac7a77cee0601165b17
 msgid "Your environment file could look like this:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:135
+#: ../../subprojects/eden.rst:139
+#: 523546e5afb4424d98813126112a3268
+msgid "Multiple endpoints exist in a single JSON object within a same environment name in environments JSON file. This environment entry will be removed from environments JSON file when last endpoint is deleted."
+msgstr ""
+
+#: ../../subprojects/eden.rst:145
+#: 5cd3e0b6c3e94613b868346148bf02b7
+msgid "When working with multiple endpoints in a single environment like in example above, keep in mind that endpoint creation/deletion time difference may result in incomplete environments (not having all necessary endpoints)."
+msgstr ""
+
+#: ../../subprojects/eden.rst:153
 #: 957e948c67d6493b968139f737628ce4
 msgid "CLI and API"
 msgstr ""
 
-#: ../../subprojects/eden.rst:137
+#: ../../subprojects/eden.rst:155
 #: 9b194092b01346389fcdea503bcad0a5
 msgid "eden is provided in two flavors: `CLI <aws-eden-cli_>`_ and `API <lambda-eden-api_>`_."
 msgstr ""
 
-#: ../../subprojects/eden.rst:139
+#: ../../subprojects/eden.rst:157
 #: 5583ffe12add4a4eb8a9976e01b3c612
 msgid "We recommend trying eden out with CLI, and when you feel you are ready to make eden part of your CI/CD pipeline, switch to API. Please note that you will need to use CLI to push `profiles <eden_profiles_>`_ for API."
 msgstr ""
 
-#: ../../subprojects/eden.rst:144
+#: ../../subprojects/eden.rst:162
 #: 883903bc8c484c28b691652806d896f5
 msgid "Installing eden CLI"
 msgstr ""
 
-#: ../../subprojects/eden.rst:165
+#: ../../subprojects/eden.rst:183
 #: ad8ce757b5db47209c7d12a903620c9f
 msgid "Hint: you can use -h on subcommands as well:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:197
+#: ../../subprojects/eden.rst:215
 #: 9000123f224241889325e055b72e279d
 msgid "Configuring eden CLI"
 msgstr ""
 
-#: ../../subprojects/eden.rst:199
+#: ../../subprojects/eden.rst:217
 #: 08081b6d291e42668df688fdd2e724a0
 msgid "Let's create a profile to work with, so we won't have to specify all the parameters every time:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:215
+#: ../../subprojects/eden.rst:233
 #: 8e3edd910e404d15afd26f389aa29d3e
 msgid "Configuration is saved to ``~/.eden/config``. Commands above created a \"default\" profile:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:235
+#: ../../subprojects/eden.rst:253
 #: 7b9715f3481f4bd48740c832dc97b8fb
 msgid "Don't forget to check configuration file integrity:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:245
+#: ../../subprojects/eden.rst:263
 #: 2c9fda6e82ca475b8dd5eab60092e100
 msgid "Profiles in eden"
 msgstr ""
 
-#: ../../subprojects/eden.rst:247
+#: ../../subprojects/eden.rst:265
 #: 943515adcddd47f1938fa293333045e3
 msgid "You can create multiple profiles in configuration and specify a profile to use with ``-p profile_name`` for all commands."
 msgstr ""
 
-#: ../../subprojects/eden.rst:254
+#: ../../subprojects/eden.rst:272
 #: 8d835f29e0104b7ab5b60c42a3f82cf6
 msgid "We can push profiles to DynamoDB for use by eden API:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:263
+#: ../../subprojects/eden.rst:281
 #: 8944c68d3829472d9e5c1b171595ca8c
 msgid "If eden table does not exist, eden CLI will create it"
 msgstr ""
 
-#: ../../subprojects/eden.rst:265
+#: ../../subprojects/eden.rst:283
 #: 4fe8cba698374fd188cba141070bbd70
 msgid "Use the same command to overwrite existing profiles (push to existing profile will result in overwrite):"
 msgstr ""
 
-#: ../../subprojects/eden.rst:272
+#: ../../subprojects/eden.rst:290
 #: d62aed10817043deaf4fc5e56270e071
 msgid "Use remote-rm to delete remote profiles:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:280
+#: ../../subprojects/eden.rst:298
 #: 712856964ef2405bbaa80b5985d9f8e7
 msgid "Execute commands"
 msgstr ""
 
-#: ../../subprojects/eden.rst:282
+#: ../../subprojects/eden.rst:300
 #: 2d16765dadd5461cbf48a021adf6b08e
 msgid "Create an environment:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:306
+#: ../../subprojects/eden.rst:324
 #: 5842f2afdbf14ec89127046b21b4fe5e
 msgid "Create and delete commands update remote state DynamoDB Table. As with ``eden config push``, table will be created for you if it does not exist."
 msgstr ""
 
-#: ../../subprojects/eden.rst:309
+#: ../../subprojects/eden.rst:327
 #: 8642d1b670574ba49966115bb5898a3a
 msgid "Check creation:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:318
+#: ../../subprojects/eden.rst:336
 #: b5274b4a53b54f1f875f45e4c3552fea
 msgid "This list is generated from remote state DynamoDB Table and not `environments JSON <eden_envs_json_>`_ file. Last updated timestamp is updated on creation and deploys as well."
 msgstr ""
 
-#: ../../subprojects/eden.rst:322
+#: ../../subprojects/eden.rst:340
 #: 4b45d88cd94b46d996da9b204c391d46
 msgid "Delete environment and check deletion:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:344
+#: ../../subprojects/eden.rst:362
 #: ff28caa8032b4df09415bb521eaa271b
 msgid "Moving to API"
 msgstr ""
 
-#: ../../subprojects/eden.rst:346
+#: ../../subprojects/eden.rst:364
 #: 75fb422ebfb04331ae1a1ed2c0743a8e
 msgid "Both CLI and API manage their state in a DynamoDB Table. This table is only created by CLI. Furthermore, API can only use \"remote profiles\", saved in state table. Before running API, make sure you pushed a profile to use with API by running ``eden config --push``. If this table does not exist during API creation in Terraform, terraform apply will fail."
 msgstr ""
 
-#: ../../subprojects/eden.rst:352
+#: ../../subprojects/eden.rst:370
 #: fdeb838f277048ea9e1878f401d33963
 msgid "API internals"
 msgstr ""
 
-#: ../../subprojects/eden.rst:354
+#: ../../subprojects/eden.rst:372
 #: fd758746341c4fabb6227bf5e31b19f9
 msgid "eden API consists of:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:356
+#: ../../subprojects/eden.rst:374
 #: a9929a7fab2249a7849e16ba5a133c56
 msgid "Lambda function (the API itself)"
 msgstr ""
 
-#: ../../subprojects/eden.rst:357
+#: ../../subprojects/eden.rst:375
 #: c6ef33eeac43454fb1700289b5fcb39f
 msgid "API Gateway with API key for protecting API"
 msgstr ""
 
-#: ../../subprojects/eden.rst:358
+#: ../../subprojects/eden.rst:376
 #: ad6ab997477f4b4686ee0959b93966c1
 msgid "DynamoDB Table for state management"
 msgstr ""
 
-#: ../../subprojects/eden.rst:360
+#: ../../subprojects/eden.rst:378
 #: ad6ab997477f4b4686ee0959b93966c1
 msgid "Default table name is eden."
 msgstr ""
 
-#: ../../subprojects/eden.rst:368
+#: ../../subprojects/eden.rst:386
 #: 750eab187af94fb2a3e556dc6a2e54ea
 msgid "Creating eden API with Terraform"
 msgstr ""
 
-#: ../../subprojects/eden.rst:390
+#: ../../subprojects/eden.rst:408
 #: 933a6a4847194528962d96316d35b4f7
 msgid "DynamoDB table for state management is created by eden CLI. Make sure to run ``eden config --push`` with success at least once before terraform apply."
 msgstr ""
 
-#: ../../subprojects/eden.rst:393
+#: ../../subprojects/eden.rst:411
 #: ff0f49ef41054036920805ab4f84fa99
 msgid "With multiple profiles, one eden API instance is enough for one account/region. Refer to `profile section <eden_profiles_>`_ for more details."
 msgstr ""
 
-#: ../../subprojects/eden.rst:397
+#: ../../subprojects/eden.rst:415
 #: 93851fcc96c44b68abbfa1d474d54f8c
 msgid "eden API commands"
 msgstr ""
 
-#: ../../subprojects/eden.rst:399
+#: ../../subprojects/eden.rst:417
 #: 207b9d5479b54cc39d965dfdaa8ab10e
 msgid "eden has only two API commands: create and delete."
 msgstr ""
 
-#: ../../subprojects/eden.rst:402
+#: ../../subprojects/eden.rst:420
 #: 285667a6e9754e339e1d8cf1bd1fff29
 msgid "GET /api/v1/create"
 msgstr ""
 
-#: ../../subprojects/eden.rst:404
-#: ../../subprojects/eden.rst:416
+#: ../../subprojects/eden.rst:422
+#: ../../subprojects/eden.rst:434
 #: 58b7d47fc76b4e81bd5a40345feb3d85
 #: 58b7d47fc76b4e81bd5a40345feb3d85
 msgid "Required query parameters:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:406
-#: ../../subprojects/eden.rst:418
+#: ../../subprojects/eden.rst:424
+#: ../../subprojects/eden.rst:436
 #: 58b7d47fc76b4e81bd5a40345feb3d85
 #: 58b7d47fc76b4e81bd5a40345feb3d85
 msgid "name: environment name"
 msgstr ""
 
-#: ../../subprojects/eden.rst:407
+#: ../../subprojects/eden.rst:425
 #: 584b9119fd55479f89eb78ba30e8485b
 msgid "image_uri: ECR image URI to deploy, must be already pushed and must be in the same account (eden API will check for image availability before deploying)"
 msgstr ""
 
-#: ../../subprojects/eden.rst:409
-#: ../../subprojects/eden.rst:420
+#: ../../subprojects/eden.rst:427
+#: ../../subprojects/eden.rst:438
 #: 58b7d47fc76b4e81bd5a40345feb3d85
 #: 58b7d47fc76b4e81bd5a40345feb3d85
 msgid "Optional query parameters:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:411
-#: ../../subprojects/eden.rst:422
+#: ../../subprojects/eden.rst:429
+#: ../../subprojects/eden.rst:440
 #: cfbcea22f3404682ac571c0a69009a2a
 #: cfbcea22f3404682ac571c0a69009a2a
 msgid "profile: eden profile to use (default value = ``default``). Profiles include all settings necessary. Profiles can be created with ``eden config --push`` command (`see here for details <eden_profiles_>`_)."
 msgstr ""
 
-#: ../../subprojects/eden.rst:414
+#: ../../subprojects/eden.rst:432
 #: 1a6f9a99599940409b29c7e84c799132
 msgid "GET /api/v1/delete"
 msgstr ""
 
-#: ../../subprojects/eden.rst:426
+#: ../../subprojects/eden.rst:444
 #: a1470aa9741b4217bd0608bc18e3fec7
 msgid "eden API Keys"
 msgstr ""
 
-#: ../../subprojects/eden.rst:427
+#: ../../subprojects/eden.rst:445
 #: 2168602e142f4748aed41bab367ca9e8
 msgid "eden API Terraform module creates one API Key for you. You can check it from API Gateway console."
 msgstr ""
 
-#: ../../subprojects/eden.rst:430
+#: ../../subprojects/eden.rst:448
 #: 9f34c95cb4564055ac74d3cc9022b206
 msgid "You will need to specify this key to access API."
 msgstr ""
 
-#: ../../subprojects/eden.rst:432
+#: ../../subprojects/eden.rst:450
 #: f7e2bde0cec64f66a487ff9d78677b67
 msgid "Key must be provided as an HTTP header::"
 msgstr ""
 
-#: ../../subprojects/eden.rst:438
+#: ../../subprojects/eden.rst:456
 #: 96c286144ffd416f92152ae68136a680
 msgid "API example"
 msgstr ""
 
-#: ../../subprojects/eden.rst:440
+#: ../../subprojects/eden.rst:458
 #: 6199d9c2577a495ab006cbb67a54befb
 msgid "Let's run create API (with a remote profile called ``api``):"
 msgstr ""
 
-#: ../../subprojects/eden.rst:446
+#: ../../subprojects/eden.rst:464
 #: 919f6183048d426b811c229dd5e9dbed
 msgid "Now let's look at logs that API Lambda Function has produced:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:464
+#: ../../subprojects/eden.rst:482
 #: be2dc56356bb43c488a10b4d5c80380c
 msgid "As state is managed in a remote DynamoDB table, you can check creation using eden CLI:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:472
+#: ../../subprojects/eden.rst:490
 #: cb76ef688e364040a243c2808bcfa265
 msgid "Now let's delete this environment by running:"
 msgstr ""
 
-#: ../../subprojects/eden.rst:478
+#: ../../subprojects/eden.rst:496
 #: a3763705087a4ac7a77cee0601165b17
 msgid "API Lambda logs will look like this:"
 msgstr ""

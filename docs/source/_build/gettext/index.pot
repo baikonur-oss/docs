@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 03:13+0900\n"
+"POT-Creation-Date: 2020-04-01 04:17+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,17 +21,17 @@ msgstr ""
 msgid "Welcome to Baikonur!"
 msgstr ""
 
-#: ../../index.rst:17
+#: ../../index.rst:16
 #: 33114609f6f44dd6a198362cddd7ade6
 msgid "What is Baikonur?"
 msgstr ""
 
-#: ../../index.rst:19
+#: ../../index.rst:18
 #: 9b8837026c1144449fa7272684a2e033
 msgid "Baikonur is an open source project that includes `Terraform Modules <https://baikonur.dev/en/latest/repository_index.html>`_, knowledge base, various infrastructure tools and more."
 msgstr ""
 
-#: ../../index.rst:22
+#: ../../index.rst:21
 #: 621068996dcc4813abca43e6f436e219
 msgid "Baikonur started as an internal project at `CyberAgent, Inc. <https://www.cyberagent.co.jp/en/>`_ in 2018, and quickly grew to over 50 modules. We started from open sourcing Baikonur started from releasing select most popular and unique internal Terraform Modules."
 msgstr ""
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Contents"
 msgstr ""
 
-#: ../../index.rst:43
+#: ../../index.rst:42
 #: 67ae426e6ca04c7994f746bfca228cac
 msgid "License"
 msgstr ""
@@ -76,17 +76,17 @@ msgstr ""
 msgid "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
 msgstr ""
 
-#: ../../index.rst:47
+#: ../../index.rst:46
 #: 8dcb781056064dc5bde209e297521272
 msgid "Indices and tables"
 msgstr ""
 
-#: ../../index.rst:49
+#: ../../index.rst:48
 #: d346aed046b24bc889e3402b7398d4a3
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../index.rst:50
+#: ../../index.rst:49
 #: c0c07f50a03a4c66985e9bba870f3211
 msgid ":ref:`search`"
 msgstr ""
