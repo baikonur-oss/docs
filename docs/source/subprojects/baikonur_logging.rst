@@ -135,8 +135,8 @@ Kinesis routing pattern
 Write data to a single Kinesis stream (a “router”).
 Create multiple output streams, each for a destination.
 We can use forwarder modules (terraform-aws-lambda-kinesis-forward_) with whitelists to create an architecture similar
-to the `Publish-subscribe pattern`_, where a topic is a value in the type field, and each output stream represents a
-subscription group::
+to the `Publish-subscribe pattern <https://en.wikipedia.org/wiki/Publish–subscribe_pattern>`_, where a topic is a value
+in the type field, and each output stream represents a subscription group::
 
        Kinesis API
            v
@@ -184,7 +184,5 @@ For instance, if you are using awslogs logging driver in ECS, using subscription
 .. _terraform-aws-lambda-kinesis-to-s3: https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-s3
 .. _terraform-aws-lambda-kinesis-to-fluent: https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent
 .. _amazon-kinesis-scaling-utils: https://github.com/awslabs/amazon-kinesis-scaling-utils
-
-.. _`Publish-subscribe pattern`: https://en.wikipedia.org/wiki/Publish–subscribe_pattern
 
 .. _`kinesis_quotas`: https://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html

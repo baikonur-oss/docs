@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 02:04+0900\n"
+"POT-Creation-Date: 2020-04-01 02:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,12 +28,12 @@ msgstr ""
 
 #: ../../faq.rst:7
 #: 5950896728e048a7b0441bed60e86daf
-msgid "Baikonur project name comes from `Baikonur Cosmodrome`_, a spaceport located in Kazakhstan known for launching the first artificial satellite and the first human spaceflight. Hence, project logo is a space rocket."
+msgid "Baikonur project name comes from `Baikonur Cosmodrome <https://en.wikipedia.org/wiki/Baikonur_Cosmodrome>`_, a spaceport located in Kazakhstan known for launching the first artificial satellite and the first human spaceflight. Hence, project logo is a space rocket."
 msgstr ""
 
 #: ../../faq.rst:11
 #: 4c6b3fc979e6425bb8cc7c71be540ea0
-msgid "The reason why we chose a space theme in the first place is quite simple - we followed `Ansible Galaxy`_ and `GitHub Universe`_."
+msgid "The reason why we chose a space theme in the first place is quite simple - we followed `Ansible Galaxy <https://galaxy.ansible.com/>`_ and `GitHub Universe <https://githubuniverse.com/>`_."
 msgstr ""
 
 #: ../../faq.rst:16
