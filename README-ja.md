@@ -10,36 +10,27 @@
 
 Baikonurへようこそ！
 
-Baikonur is an open source project that includes 
-[Terraform Modules](https://baikonur.dev/en/latest/repository_index.html), 
-[knowledge base](https://baikonur.dev/en/latest/knowledge_base/index.html), various infrastructure tools and more.
+Baikonurは、[Terraformモジュール](https://baikonur.dev/en/latest/repository_index.html)、[ナレッジ](https://baikonur.dev/en/latest/knowledge_base/index.html)、インフラ周りのツールなどを含むオープンソースプロジェクトです。
 
-Baikonur started as an internal project at [CyberAgent, Inc.](https://www.cyberagent.co.jp/en/) in 2018, 
-and quickly grew to over 50 modules. 
-We started from open sourcing Baikonur started from releasing select most popular and unique internal Terraform Modules.
+Baikonurは2018年に[株式会社サイバーエージェント](https://www.cyberagent.co.jp/) での社内プロジェクトとしてスタートし、すぐに50モジュールを超えました。最も人気のある、ユニークなモジュールをここでオープンソース化することからスタートしました。
 
-## Usage
+## 使い方
 
-Follow instructions in repository READMEs or 
-[Terraform Module Registry pages](https://registry.terraform.io/modules/baikonur-oss).
-Refer to examples in repositories, and don't forget to use proper 
-[version pinning](https://www.terraform.io/docs/configuration/modules.html#module-versions).
+各リポジトリのREADMEまたは[Terraform Module Registry のページ](https://registry.terraform.io/modules/baikonur-oss)に従ってください。リポジトリでの使用例を参照し、適切な [バージョン固定](https://www.terraform.io/docs/configuration/modules.html#module-versions) をご利用ください。
 
-## Modules and tools
+## モジュールとツール
 
-You can find repository index [here](https://baikonur.dev/en/latest/repository_index.html),
-or you can browse all repositories in [baikonur-oss organization](https://github.com/baikonur-oss).
+リポジトリ一覧は[こちら](https://baikonur.dev/en/latest/repository_index.html)です。[baikonur-oss Organization](https://github.com/baikonur-oss)ページからも全てのリポcじとりのリストが見れます。
 
-Terraform Modules released here are also published to 
-[Terraform Public Module Registry](https://registry.terraform.io/modules/baikonur-oss).
+baikonur-oss OrganizationにリリースされているTerraformモジュールは、[Terraform Public Module Registry](https://registry.terraform.io/modules/baikonur-oss)でも公開されています。
 
 ## Contributing
-PRs, issues, and any other form of feedback is very welcome in all repositories under baikonur-oss organization! :smile:
+baikonur-oss Organization配下のすべてのリポジトリへのPR、Issueなどでのフィードバック大歓迎です! :smile: 
 
-If you have a module you would like to donate to Baikonur, let us know in Issues of this repository.
+Baikonurに寄付したいモジュールがある場合は、このリポジトリのイシューでお知らせください。
 
-<!-- Maintainers and contributors wanted! -->
+<!-- メンターとコントリビューター募集中! -->
 
-## License
+## ライセンス
 
-Consult LICENSE file in each individual repository. Baikonur logos are CC0.
+各リポジトリーのLICENSEファイルを参照してください。BaikonurのロゴはCC0です。
