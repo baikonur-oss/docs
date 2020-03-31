@@ -16,46 +16,55 @@ may be shared.
 How?
 ----
 
-eden clones Task Definition, ECS Service and Target Group from reference service.
+eden clones Task Definition, ECS Service and Target Group from a reference service.
 
-eden uses one common ALB for multiple cloned services to save money and time (it takes 3-5 minutes to create an ALB).
-After creating a cloned service, eden creates a Route 53 Record pointing at common ALB and attaches
+eden uses one common ALB for all cloned services to save money and time (it can take up to 5 minutes to create an ALB).
+eden creates a Target Group, clones a service, attaches created Target Group to common ALB, and creates a
+Route 53 A ALIAS record pointing at common ALB.
 
 
 Resource creation order
 ^^^^^^^^^^^^^^^^^^^^^^^
 1. ECS Task Definition
-   -  Cloned from reference service
 
-2. ALB (elbv2) Target Group
-   - Settings cloned from Target Group attached to reference service
+   - Cloned from reference service
+
+2. ALB Target Group
+
+   - Settings are cloned from the Target Group attached to reference service
 
 3. ECS Service
+
    - Created in the same cluster as reference service
 
 4. ALB Listener Rule
+
    - Host Header rule
 
-5. Route 53 CNAME record
+5. Route 53 A ALIAS record
+
    - Points at common ALB
 
 6. An entry is added to environments JSON file
 
 .. note::
-    Resource deletion is performed in reverse order
+    Resource deletion is performed in reverse order.
+    Both creation and deletion should take no more than 5 seconds.
 
 Prerequisites
 -------------
 
 1. Environments JSON file in a S3 bucket
+
    - Structure and details are described `here <eden_envs_json_>`_
 
 2. A reference ECS Service with Target Group Attached
 
-3. An ALB with HTTPS Listener
+3. A common ALB for services managed by eden
 
    - Will be reused by all environments with Host Header Listener Rules
    - Separate from what reference service uses
+   - Must have HTTPS Listener
    - Listener must have wildcard certificate for target dynamic zone
 
 4. Simple ALB usage
@@ -76,7 +85,7 @@ Under construction
 Environments JSON file
 ----------------------
 
-Environments JSON file is used to:
+The Environments JSON file is used to:
 
 1. Check what environments exist and where their endpoints are
 2. Tell client apps what is available
@@ -96,10 +105,10 @@ Environments JSON file example:
     }
 
 Example above presumes ``config_update_key = api_endpoint``.
-You can create environments with same names but with profiles with different ``config_update_key`` settings to have
-multiple endpoints within single environment.
+You can create environments with the same names, but with profiles with different ``config_update_key`` settings to have
+multiple endpoints within a single environment.
+For example, you may want to have an API, administration tool, and a frontend service created as a single environment.
 
-For example, you may want to have API, administration tool and a frontend service created as a single environment.
 Your environment file could look like this:
 
 .. code-block:: json

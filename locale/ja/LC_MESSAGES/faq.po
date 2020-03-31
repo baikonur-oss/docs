@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CyberAgent, Inc.
+# This file is distributed under the same license as the Baikonur package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Baikonur\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-17 14:44+0900\n"
+"PO-Revision-Date: 2020-03-17 05:48+0000\n"
+"Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../faq.rst:2 64ce2cb10e0548a89e90cb3618e52097
+msgid "FAQ"
+msgstr ""
+
+#: ../../faq.rst:5 e464207ce4264abc9dad463bdf044a2f
+msgid "Why is this project named \"Baikonur\"?"
+msgstr ""
+
+#: ../../faq.rst:7 5950896728e048a7b0441bed60e86daf
+msgid ""
+"Baikonur project name comes from `Baikonur Cosmodrome`_, a spaceport located"
+" in Kazakhstan known for launching the first artificial satellite and the "
+"first human spaceflight. Hence, project logo is a space rocket."
+msgstr ""
+
+#: ../../faq.rst:11 4c6b3fc979e6425bb8cc7c71be540ea0
+msgid ""
+"The reason why we chose a space theme in the first place is quite simple - "
+"we followed `Ansible Galaxy`_ and `Github Universe`_."
+msgstr ""
+
+#: ../../faq.rst:16 8a31cc3215904671874df0d5af4f9b23
+msgid "Is this project limited to Terraform Modules?"
+msgstr ""
+
+#: ../../faq.rst:18 80e864cf95b546d18bbdc62999bc5c26
+msgid ""
+"Absolutely not. Although Baikonur Project started as a platform for open "
+"sourcing internally used Terraform Modules,"
+msgstr ""
+
+#: ../../faq.rst:22 c162b048d9ad480b9f02f907455d9089
+msgid ""
+"Do I have to be a CyberAgent employee to become a "
+"contributor/maintainer/core member?"
+msgstr ""
+
+#: ../../faq.rst:24 ba69e8c8131b4ba0903fa275677eceeb
+msgid "You do not *have to*. :)"
+msgstr ""

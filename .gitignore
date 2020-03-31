@@ -13,3 +13,4 @@ terraform.tfvars
 
 # Sphinx documentation
 docs/source/_build/html
+docs/source/build/html
