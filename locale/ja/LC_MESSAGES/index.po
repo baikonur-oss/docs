@@ -23,17 +23,17 @@ msgstr ""
 
 #: ../../index.rst:7 c7297ac98f3949edbc7600e16fce4dfd
 msgid "Welcome to Baikonur!"
-msgstr ""
+msgstr "Baikonurへようこそ！"
 
 #: ../../index.rst:17 33114609f6f44dd6a198362cddd7ade6
 msgid "What is Baikonur?"
-msgstr ""
+msgstr "Baikonurとは"
 
 #: ../../index.rst:19 9b8837026c1144449fa7272684a2e033
 msgid ""
 "Baikonur is an open source project that includes `Terraform Modules`_, "
 "knowledge base, various infrastructure tools and more."
-msgstr ""
+msgstr "Baikonurは、`Terraformモジュール`_、ナレッジ、インフラ周りのツールなどを含むオープンソースプロジェクトです。"
 
 #: ../../index.rst:22 621068996dcc4813abca43e6f436e219
 msgid ""
@@ -42,28 +42,30 @@ msgid ""
 "started from releasing select most popular and unique internal Terraform "
 "Modules."
 msgstr ""
+"Baikonurは2018年に`株式会社サイバーエージェント <https://www.cyberagent.co.jp/>`_ "
+"での社内プロジェクトとしてスタートし、すぐに50モジュールを超えました。最も人気のある、ユニークなモジュールをここでオープンソース化からスタートしました。"
 
 #: ../../index.rst:25 9662b0bf666d4dbda4b5bc7e53ac0a4b
 msgid ""
 "Terraform Modules released here are also published to `Terraform Public "
 "Module Registry`_."
-msgstr ""
+msgstr "ここでリリースされているモジュールは、`Terraform Public Module Registry`_にも公開されています。"
 
 #: ../../index.rst:28 fe42787c3fdf4ab3bfa483c4c3fb9a8c
 msgid "Contents"
-msgstr ""
+msgstr "目次"
 
 #: ../../index.rst:43 67ae426e6ca04c7994f746bfca228cac
 msgid "License"
-msgstr ""
+msgstr "ライセンス"
 
 #: ../../../../LICENSE:1 5d37fd2b41ed418daf0185443d387d17
 msgid "MIT License"
-msgstr ""
+msgstr "MIT License"
 
 #: ../../../../LICENSE:3 9d329fee02eb4940a319f77d930d8061
 msgid "Copyright (c) 2019 CyberAgent, Inc."
-msgstr ""
+msgstr "Copyright (c) 2019 CyberAgent, Inc."
 
 #: ../../../../LICENSE:5 7d3f06af6ea249a7b7cc9a30e2ecb2fe
 msgid ""
@@ -74,12 +76,20 @@ msgid ""
 "sell copies of the Software, and to permit persons to whom the Software is "
 "furnished to do so, subject to the following conditions:"
 msgstr ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy"
+" of this software and associated documentation files (the \"Software\"), to "
+"deal in the Software without restriction, including without limitation the "
+"rights to use, copy, modify, merge, publish, distribute, sublicense, and/or "
+"sell copies of the Software, and to permit persons to whom the Software is "
+"furnished to do so, subject to the following conditions:"
 
 #: ../../../../LICENSE:12 4436ce9e108f4bf389f69b7ff07e2018
 msgid ""
 "The above copyright notice and this permission notice shall be included in "
 "all copies or substantial portions of the Software."
 msgstr ""
+"The above copyright notice and this permission notice shall be included in "
+"all copies or substantial portions of the Software."
 
 #: ../../../../LICENSE:15 b4b78c01c9ec4f4d839af4a1146819b0
 msgid ""
@@ -91,6 +101,13 @@ msgid ""
 "FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS"
 " IN THE SOFTWARE."
 msgstr ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR"
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, "
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE "
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER "
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING "
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS"
+" IN THE SOFTWARE."
 
 #: ../../index.rst:47 8dcb781056064dc5bde209e297521272
 msgid "Indices and tables"

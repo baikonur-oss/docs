@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the Baikonur package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Torgayev Tamirlan <torgayev@me.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-17 14:44+0900\n"
 "PO-Revision-Date: 2020-03-17 05:48+0000\n"
+"Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,8 +23,8 @@ msgstr ""
 
 #: ../../knowledge_base/index.rst:4 1759f9d9da58430bbdeb4f91a7270176
 msgid "Knowledge Base"
-msgstr ""
+msgstr "ナレッジベース"
 
 #: ../../knowledge_base/index.rst:6 366645cf00344d9c91523830bb9d2bce
 msgid "Under construction."
-msgstr ""
+msgstr "工事中。"

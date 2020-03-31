@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 14:44+0900\n"
+"POT-Creation-Date: 2020-04-01 02:04+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../faq.rst:11
 #: 4c6b3fc979e6425bb8cc7c71be540ea0
-msgid "The reason why we chose a space theme in the first place is quite simple - we followed `Ansible Galaxy`_ and `Github Universe`_."
+msgid "The reason why we chose a space theme in the first place is quite simple - we followed `Ansible Galaxy`_ and `GitHub Universe`_."
 msgstr ""
 
 #: ../../faq.rst:16
@@ -42,16 +42,16 @@ msgid "Is this project limited to Terraform Modules?"
 msgstr ""
 
 #: ../../faq.rst:18
-#: 80e864cf95b546d18bbdc62999bc5c26
-msgid "Absolutely not. Although Baikonur Project started as a platform for open sourcing internally used Terraform Modules,"
+#: 1a1c1032cdc7490a918677066cc60a2a
+msgid "Absolutely not. Although Baikonur Project started as a platform for open sourcing internally used Terraform Modules, we have been creating Python libraries, CLI tools, and we are preparing to publish our infrastructure Knowledge Base."
 msgstr ""
 
-#: ../../faq.rst:22
+#: ../../faq.rst:23
 #: c162b048d9ad480b9f02f907455d9089
 msgid "Do I have to be a CyberAgent employee to become a contributor/maintainer/core member?"
 msgstr ""
 
-#: ../../faq.rst:24
+#: ../../faq.rst:25
 #: ba69e8c8131b4ba0903fa275677eceeb
 msgid "You do not *have to*. :)"
 msgstr ""
