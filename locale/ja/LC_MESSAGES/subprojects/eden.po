@@ -225,7 +225,7 @@ msgstr "CLIとAPI"
 msgid ""
 "eden is provided in two flavors: `CLI <aws-eden-cli_>`_ and `API <lambda-"
 "eden-api_>`_."
-msgstr "edenは `CLI <aws-eden-cli_> `_と` API <lambda-eden-api_> `_として利用できます。"
+msgstr "edenは `CLI <aws-eden-cli_>`_ と `API <lambda-eden-api_>`_ として利用できます。"
 
 #: ../../subprojects/eden.rst:139 5583ffe12add4a4eb8a9976e01b3c612
 msgid ""
@@ -234,7 +234,7 @@ msgid ""
 "will need to use CLI to push `profiles <eden_profiles_>`_ for API."
 msgstr ""
 "まず、eden CLIを試すことをお勧めします。edenをCI/CDパイプラインに追加する準備ができたら、eden "
-"APIの利用を推奨します。APIのための `プロファイル<eden_profiles_> `_ のプッシュにはCLIが必要であることに注意してください。"
+"APIの利用を推奨します。APIのための `プロファイル <eden_profiles_>`_ のプッシュにはCLIが必要であることに注意してください。"
 
 #: ../../subprojects/eden.rst:144 883903bc8c484c28b691652806d896f5
 msgid "Installing eden CLI"
@@ -260,7 +260,7 @@ msgid ""
 "Configuration is saved to ``~/.eden/config``. Commands above created a "
 "\"default\" profile:"
 msgstr ""
-"設定は ``〜/ .eden / config``に保存されます。上記のコマンドで ``default`` というプロファイルが作成されました:"
+"設定は ``~/.eden/config`` に保存されます。上記のコマンドで ``default`` というプロファイルが作成されました:"
 
 #: ../../subprojects/eden.rst:235 7b9715f3481f4bd48740c832dc97b8fb
 msgid "Don't forget to check configuration file integrity:"
@@ -275,7 +275,7 @@ msgid ""
 "You can create multiple profiles in configuration and specify a profile to "
 "use with ``-p profile_name`` for all commands."
 msgstr ""
-"複数のプロファイルを使用できます。設定で複数のプロファイルを作成し、コマンドを実行する際にの `` -p プロファイル名`` "
+"複数のプロファイルを使用できます。設定で複数のプロファイルを作成し、コマンドを実行する際にの ``-p プロファイル名`` "
 "で使用するプロファイルを指定できます。"
 
 #: ../../subprojects/eden.rst:254 8d835f29e0104b7ab5b60c42a3f82cf6
@@ -309,8 +309,8 @@ msgid ""
 "Create and delete commands update remote state DynamoDB Table. As with "
 "``eden config push``, table will be created for you if it does not exist."
 msgstr ""
-"create、deleteコマンドは、リモートステート(DynamoDBテーブル)を更新します。 `` eden config "
-"push``と同様に、テーブルが存在しない場合、テーブルが自動的に作成されます。"
+"create、deleteコマンドは、リモートステート(DynamoDBテーブル)を更新します。 ``eden config push`` "
+"と同様に、テーブルが存在しない場合、テーブルが自動的に作成されます。"
 
 #: ../../subprojects/eden.rst:309 8642d1b670574ba49966115bb5898a3a
 msgid "Check creation:"
@@ -322,9 +322,8 @@ msgid ""
 "`environments JSON <eden_envs_json_>`_ file. Last updated timestamp is "
 "updated on creation and deploys as well."
 msgstr ""
-"この一覧は、 `Environments "
-"JSONファイル<eden_envs_json_>`_ではなく、リモートステートのDynamoDBテーブルから生成されます "
-"`_ファイル。最後に更新されたタイムスタンプは、createでの環境の新規作成、すでに存在する環境へのデプロイで更新されます。"
+"この一覧は、 `Environments JSON <eden_envs_json_>`_ "
+"ファイルではなく、リモートステートのDynamoDBテーブルから生成されます。最後に更新されたタイムスタンプは、createでの環境の新規作成、すでに存在する環境へのデプロイで更新されます。"
 
 #: ../../subprojects/eden.rst:322 4b45d88cd94b46d996da9b204c391d46
 msgid "Delete environment and check deletion:"
@@ -343,8 +342,8 @@ msgid ""
 "API creation in Terraform, terraform apply will fail."
 msgstr ""
 "CLIとAPIの両方がDynamoDBテーブルでステートを管理します。このテーブルはCLIによってのみ作成されます。また、APIはリモートステートに格納されたプロファイルのみを使用できます。"
-" APIを初めて実行する前に、``eden config "
-"--push```を実行して、APIのためのプロファイルをプッシュしてください。TerraformでAPIを構築する際に、リモートステートテーブルが存在しない場合、terraform"
+" APIを初めて実行する前に、 ``eden config --push`` "
+"を実行して、APIのためのプロファイルをプッシュしてください。TerraformでAPIを構築する際に、リモートステートテーブルが存在しない場合、terraform"
 " applyの実行が失敗します。"
 
 #: ../../subprojects/eden.rst:352 fdeb838f277048ea9e1878f401d33963
@@ -380,7 +379,7 @@ msgid ""
 "DynamoDB table for state management is created by eden CLI. Make sure to run"
 " ``eden config --push`` with success at least once before terraform apply."
 msgstr ""
-"ステート管理のためのDynamoDBテーブルはeden CLIによって作成されます。 ``terraform apply``を実行する前に、一度 "
+"ステート管理のためのDynamoDBテーブルはeden CLIによって作成されます。 ``terraform apply`` を実行する前に、一度 "
 "``eden config --push`` を実行してください。"
 
 #: ../../subprojects/eden.rst:393 ff0f49ef41054036920805ab4f84fa99
@@ -389,8 +388,8 @@ msgid ""
 "account/region. Refer to `profile section <eden_profiles_>`_ for more "
 "details."
 msgstr ""
-"複数のプロファイルを使うことで、1つのアカウント/リージョンに対して1つのeden APIで十分です。詳しくは "
-"`プロファイル<eden_profiles_> `_セクションを参照してください。"
+"複数のプロファイルを使うことで、1つのアカウント/リージョンに対して1つのeden APIで十分です。詳しくは `プロファイル "
+"<eden_profiles_>`_ セクションを参照してください。"
 
 #: ../../subprojects/eden.rst:397 93851fcc96c44b68abbfa1d474d54f8c
 msgid "eden API commands"
@@ -435,9 +434,9 @@ msgid ""
 " all settings necessary. Profiles can be created with ``eden config --push``"
 " command (`see here for details <eden_profiles_>`_)."
 msgstr ""
-"profile: edenのリモートプロファイルの指定 (デフォルト値は `` "
-"default`)。プロファイルには、コマンドを実行するために必要なすべての設定が含まれています。リモートプロファイルは `` eden config "
-"--push``コマンドで作成できます(詳細は`こちら<eden_profiles_> `_を参照)。"
+"profile: edenのリモートプロファイルの指定 (デフォルト値は ``default`` "
+")。プロファイルには、コマンドを実行するために必要なすべての設定が含まれています。リモートプロファイルは ``eden config --push`` "
+"コマンドで作成できます(詳細は `こちら <eden_profiles_>`_ を参照)。"
 
 #: ../../subprojects/eden.rst:414 1a6f9a99599940409b29c7e84c799132
 msgid "GET /api/v1/delete"
@@ -468,7 +467,7 @@ msgstr "API使用例"
 
 #: ../../subprojects/eden.rst:440 6199d9c2577a495ab006cbb67a54befb
 msgid "Let's run create API (with a remote profile called ``api``):"
-msgstr "``api``という名前のリモートプロファイルを使ってcreate APIを実行してみましょう:"
+msgstr "``api`` という名前のリモートプロファイルを使ってcreate APIを実行してみましょう:"
 
 #: ../../subprojects/eden.rst:446 919f6183048d426b811c229dd5e9dbed
 msgid "Now let's look at logs that API Lambda Function has produced:"

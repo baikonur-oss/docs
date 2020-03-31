@@ -103,8 +103,8 @@ msgid ""
 "A Python library of useful utilities for Amazon Kinesis. Extensively used by"
 " `logging modules <repository_index_logging_>`_."
 msgstr ""
-"Amazon Kinesisでのデータ処理に役立つPythonライブラリ。 `ロギングモジュール<repository_index_logging_> "
-"`_で大きく使われている。"
+"Amazon Kinesisでのデータ処理に役立つPythonライブラリ。 `ロギングモジュール "
+"<repository_index_logging_>`_ で大きく使われている。"
 
 #: ../../repository_index.rst:63 fa88e836c8a444a8af3bd9d0ea37f022
 msgid "aws-eden-core_"
@@ -112,7 +112,7 @@ msgstr "aws-eden-core_"
 
 #: ../../repository_index.rst:64 e0872dbb865c462b87658cd212e4c21c
 msgid "Internal library for `eden modules <repository_index_eden_>`_."
-msgstr "`edenモジュール<repository_index_eden_> `_用の内部ライブラリ。"
+msgstr "`edenモジュール <repository_index_eden_>`_ 用の内部ライブラリ。"
 
 #: ../../repository_index.rst:67 f724300e6391412db571f8e451dd2cf3
 msgid "Other Terraform Modules for AWS"

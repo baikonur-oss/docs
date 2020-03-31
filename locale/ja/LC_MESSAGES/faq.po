@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 02:04+0900\n"
+"POT-Creation-Date: 2020-04-01 02:28+0900\n"
 "PO-Revision-Date: 2020-03-17 05:48+0000\n"
 "Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
@@ -31,18 +31,23 @@ msgstr "このプロジェクトの名前がなぜ「Baikonur (バイコヌー�
 
 #: ../../faq.rst:7 5950896728e048a7b0441bed60e86daf
 msgid ""
-"Baikonur project name comes from `Baikonur Cosmodrome`_, a spaceport located"
-" in Kazakhstan known for launching the first artificial satellite and the "
+"Baikonur project name comes from `Baikonur Cosmodrome "
+"<https://en.wikipedia.org/wiki/Baikonur_Cosmodrome>`_, a spaceport located "
+"in Kazakhstan known for launching the first artificial satellite and the "
 "first human spaceflight. Hence, project logo is a space rocket."
 msgstr ""
-"Baikonur プロジェクトの名前は、人類初の人工衛星の打ち上げと人類初の有人宇宙飛行で知られるカザフスタンにある宇宙港である`バイコヌール宇宙基地 "
-"<https://ja.wikipedia.org/wiki/バイコヌール宇宙基地>`_ に由来しています。"
+"Baikonur プロジェクトの名前は、人類初の人工衛星の打ち上げと人類初の有人宇宙飛行で知られるカザフスタンにある宇宙港である `バイコヌール宇宙基地"
+" <https://ja.wikipedia.org/wiki/バイコヌール宇宙基地>`_ "
+"に由来しています。そのため、プロジェクトのロゴはロケットです。"
 
 #: ../../faq.rst:11 4c6b3fc979e6425bb8cc7c71be540ea0
 msgid ""
 "The reason why we chose a space theme in the first place is quite simple - "
-"we followed `Ansible Galaxy`_ and `GitHub Universe`_."
-msgstr "そもそも宇宙のテーマを選んだ理由は非常に単純です。`Ansible Galaxy`_と`GitHub Universe`_に倣いました。"
+"we followed `Ansible Galaxy <https://galaxy.ansible.com/>`_ and `GitHub "
+"Universe <https://githubuniverse.com/>`_."
+msgstr ""
+"そもそも宇宙のテーマを選んだ理由は非常に単純です。 `Ansible Galaxy <https://galaxy.ansible.com/>`_ と "
+"`GitHub Universe <https://githubuniverse.com/>`_ に倣いました。"
 
 #: ../../faq.rst:16 8a31cc3215904671874df0d5af4f9b23
 msgid "Is this project limited to Terraform Modules?"
