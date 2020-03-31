@@ -41,7 +41,6 @@ Kinesis Data Streams to Kinesis Data Streams forwarder/router module
 
 .. _repository_index_eden:
 
-
 :ref:`eden_top`
 ---------------
 
@@ -58,11 +57,11 @@ Tools and libraries
 
 amazon_kinesis_utils_
 ^^^^^^^^^^^^^^^^^^^^^^
-A Python library of useful utilities for Amazon Kinesis. Extensively used by repository_index_logging_.
+A Python library of useful utilities for Amazon Kinesis. Extensively used by `logging modules <repository_index_logging_>`_.
 
 aws-eden-core_
 ^^^^^^^^^^^^^^
-Internal library for repository_index_eden
+Internal library for `eden modules <repository_index_eden_>`_.
 
 Other Terraform Modules for AWS
 -------------------------------

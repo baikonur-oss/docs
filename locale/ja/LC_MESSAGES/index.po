@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tamirlan Torgayev <torgayev@me.com>, 2020
+# Torgayev Tamirlan <torgayev@me.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-13 19:43+0900\n"
+"POT-Creation-Date: 2020-04-01 03:13+0900\n"
 "PO-Revision-Date: 2020-03-13 10:58+0000\n"
-"Last-Translator: Tamirlan Torgayev <torgayev@me.com>, 2020\n"
+"Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,26 +21,106 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../index.rst:9
-msgid "Contents:"
-msgstr "目次:"
-
 #: ../../index.rst:7 c7297ac98f3949edbc7600e16fce4dfd
-msgid "Welcome to Baikonur's documentation!"
-msgstr "Baikonurドキュメンテーションへようこそ!"
+msgid "Welcome to Baikonur!"
+msgstr "Baikonurへようこそ！"
 
-#: ../../index.rst:16 8dcb781056064dc5bde209e297521272
+#: ../../index.rst:17 33114609f6f44dd6a198362cddd7ade6
+msgid "What is Baikonur?"
+msgstr "Baikonurとは"
+
+#: ../../index.rst:19 9b8837026c1144449fa7272684a2e033
+msgid ""
+"Baikonur is an open source project that includes `Terraform Modules "
+"<https://baikonur.dev/en/latest/repository_index.html>`_, knowledge base, "
+"various infrastructure tools and more."
+msgstr ""
+"Baikonurは、 `Terraformモジュール "
+"<https://baikonur.dev/ja/latest/repository_index.html>`_ "
+"、ナレッジ、インフラ周りのツールなどを含むオープンソースプロジェクトです。"
+
+#: ../../index.rst:22 621068996dcc4813abca43e6f436e219
+msgid ""
+"Baikonur started as an internal project at `CyberAgent, Inc. "
+"<https://www.cyberagent.co.jp/en/>`_ in 2018, and quickly grew to over 50 "
+"modules. We started from open sourcing Baikonur started from releasing "
+"select most popular and unique internal Terraform Modules."
+msgstr ""
+"Baikonurは2018年に `株式会社サイバーエージェント <https://www.cyberagent.co.jp/>`_ "
+"での社内プロジェクトとしてスタートし、すぐに50モジュールを超えました。最も人気のある、ユニークなモジュールをここでオープンソース化からスタートしました。"
+
+#: ../../index.rst:25 9662b0bf666d4dbda4b5bc7e53ac0a4b
+msgid ""
+"Terraform Modules released here are also published to `Terraform Public "
+"Module Registry`_."
+msgstr "ここでリリースされているモジュールは、 `Terraform Public Module Registry`_ にも公開されています。"
+
+#: ../../index.rst:28 fe42787c3fdf4ab3bfa483c4c3fb9a8c
+msgid "Contents"
+msgstr "目次"
+
+#: ../../index.rst:43 67ae426e6ca04c7994f746bfca228cac
+msgid "License"
+msgstr "ライセンス"
+
+#: ../../../../LICENSE:1 5d37fd2b41ed418daf0185443d387d17
+msgid "MIT License"
+msgstr "MIT License"
+
+#: ../../../../LICENSE:3 9d329fee02eb4940a319f77d930d8061
+msgid "Copyright (c) 2019 CyberAgent, Inc."
+msgstr "Copyright (c) 2019 CyberAgent, Inc."
+
+#: ../../../../LICENSE:5 7d3f06af6ea249a7b7cc9a30e2ecb2fe
+msgid ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy"
+" of this software and associated documentation files (the \"Software\"), to "
+"deal in the Software without restriction, including without limitation the "
+"rights to use, copy, modify, merge, publish, distribute, sublicense, and/or "
+"sell copies of the Software, and to permit persons to whom the Software is "
+"furnished to do so, subject to the following conditions:"
+msgstr ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy"
+" of this software and associated documentation files (the \"Software\"), to "
+"deal in the Software without restriction, including without limitation the "
+"rights to use, copy, modify, merge, publish, distribute, sublicense, and/or "
+"sell copies of the Software, and to permit persons to whom the Software is "
+"furnished to do so, subject to the following conditions:"
+
+#: ../../../../LICENSE:12 4436ce9e108f4bf389f69b7ff07e2018
+msgid ""
+"The above copyright notice and this permission notice shall be included in "
+"all copies or substantial portions of the Software."
+msgstr ""
+"The above copyright notice and this permission notice shall be included in "
+"all copies or substantial portions of the Software."
+
+#: ../../../../LICENSE:15 b4b78c01c9ec4f4d839af4a1146819b0
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR"
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, "
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE "
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER "
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING "
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS"
+" IN THE SOFTWARE."
+msgstr ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR"
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, "
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE "
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER "
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING "
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS"
+" IN THE SOFTWARE."
+
+#: ../../index.rst:47 8dcb781056064dc5bde209e297521272
 msgid "Indices and tables"
 msgstr "目次と索引"
 
-#: ../../index.rst:18 d346aed046b24bc889e3402b7398d4a3
+#: ../../index.rst:49 d346aed046b24bc889e3402b7398d4a3
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:19 d8ebe7709db34482b9d382dd503d3317
-msgid ":ref:`modindex`"
-msgstr ":ref:`modindex`"
-
-#: ../../index.rst:20 c0c07f50a03a4c66985e9bba870f3211
+#: ../../index.rst:50 c0c07f50a03a4c66985e9bba870f3211
 msgid ":ref:`search`"
 msgstr ":ref:`search`"

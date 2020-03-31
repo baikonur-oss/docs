@@ -16,46 +16,55 @@ may be shared.
 How?
 ----
 
-eden clones Task Definition, ECS Service and Target Group from reference service.
+eden clones Task Definition, ECS Service and Target Group from a reference service.
 
-eden uses one common ALB for multiple cloned services to save money and time (it takes 3-5 minutes to create an ALB).
-After creating a cloned service, eden creates a Route 53 Record pointing at common ALB and attaches
+eden uses one common ALB for all cloned services to save money and time (it can take up to 5 minutes to create an ALB).
+eden creates a Target Group, clones a service, attaches created Target Group to common ALB, and creates a
+Route 53 A ALIAS record pointing at common ALB.
 
 
 Resource creation order
 ^^^^^^^^^^^^^^^^^^^^^^^
 1. ECS Task Definition
-   -  Cloned from reference service
 
-2. ALB (elbv2) Target Group
-   - Settings cloned from Target Group attached to reference service
+   - Cloned from reference service
+
+2. ALB Target Group
+
+   - Settings are cloned from the Target Group attached to reference service
 
 3. ECS Service
+
    - Created in the same cluster as reference service
 
 4. ALB Listener Rule
+
    - Host Header rule
 
-5. Route 53 CNAME record
+5. Route 53 A ALIAS record
+
    - Points at common ALB
 
 6. An entry is added to environments JSON file
 
 .. note::
-    Resource deletion is performed in reverse order
+    Resource deletion is performed in reverse order.
+    Both creation and deletion should take no more than 5 seconds.
 
 Prerequisites
 -------------
 
 1. Environments JSON file in a S3 bucket
+
    - Structure and details are described `here <eden_envs_json_>`_
 
 2. A reference ECS Service with Target Group Attached
 
-3. An ALB with HTTPS Listener
+3. A common ALB for services managed by eden
 
    - Will be reused by all environments with Host Header Listener Rules
    - Separate from what reference service uses
+   - Must have HTTPS Listener
    - Listener must have wildcard certificate for target dynamic zone
 
 4. Simple ALB usage
@@ -76,7 +85,7 @@ Under construction
 Environments JSON file
 ----------------------
 
-Environments JSON file is used to:
+The Environments JSON file is used to:
 
 1. Check what environments exist and where their endpoints are
 2. Tell client apps what is available
@@ -96,10 +105,10 @@ Environments JSON file example:
     }
 
 Example above presumes ``config_update_key = api_endpoint``.
-You can create environments with same names but with profiles with different ``config_update_key`` settings to have
-multiple endpoints within single environment.
+You can create environments with the same names, but with profiles with different ``config_update_key`` settings to have
+multiple endpoints within a single environment.
+For example, you may want to have an API, administration tool, and a frontend service created as a single environment.
 
-For example, you may want to have API, administration tool and a frontend service created as a single environment.
 Your environment file could look like this:
 
 .. code-block:: json
@@ -127,7 +136,9 @@ CLI and API
 
 eden is provided in two flavors: `CLI <aws-eden-cli_>`_ and `API <lambda-eden-api_>`_.
 
-We recommend trying eden out with CLI, and when you feel you are ready to make eden part of your CI/CD pipeline.
+We recommend trying eden out with CLI, and when you feel you are ready to make eden part of your CI/CD pipeline,
+switch to API.
+Please note that you will need to use CLI to push `profiles <eden_profiles_>`_ for API.
 
 Installing eden CLI
 ^^^^^^^^^^^^^^^^^^^
@@ -249,7 +260,7 @@ We can push profiles to DynamoDB for use by eden API:
     Successfully pushed profile api to DynamoDB
 
 .. note::
-    If eden table does not exist, aws-eden-cli will create it
+    If eden table does not exist, eden CLI will create it
 
 Use the same command to overwrite existing profiles (push to existing profile will result in overwrite):
 
@@ -345,6 +356,7 @@ eden API consists of:
 1. Lambda function (the API itself)
 2. API Gateway with API key for protecting API
 3. DynamoDB Table for state management
+
    - Default table name is eden.
 
 .. _`aws-eden-cli`: https://github.com/baikonur-oss/aws-eden-cli
@@ -361,7 +373,7 @@ Creating eden API with Terraform
       source  = "baikonur-oss/lambda-eden-api/aws"
       version = "0.2.0"
 
-      lambda_package_url = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
+      lambda_package_url    = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
       name                  = "eden"
 
        # eden API Gateway variables
@@ -371,11 +383,11 @@ Creating eden API with Terraform
 
       endpoints_bucket_name = "somebucket"
 
-      dynamic_zone_id       = "${data.aws_route53_zone.dynamic.zone_id}"
+      dynamic_zone_id = "${data.aws_route53_zone.dynamic.zone_id}"
     }
 
 .. warning::
-   DynamoDB table for state management is created by aws-eden-cli.
+   DynamoDB table for state management is created by eden CLI.
    Make sure to run ``eden config --push`` with success at least once before terraform apply.
 
 With multiple profiles, one eden API instance is enough for one account/region.
@@ -390,19 +402,23 @@ GET /api/v1/create
 """"""""""""""""""
 
 Required query parameters:
+
 - name: environment name
 - image_uri: ECR image URI to deploy, must be already pushed and must be in the same account (eden API will check for image availability before deploying)
 
 Optional query parameters:
-- profile: default value = "default". eden profile to use. Profiles include all settings necessary. Profiles can be created with `eden config --push` command. Refer to aws-eden-cli examples for more details.
+
+- profile: eden profile to use (default value = ``default``). Profiles include all settings necessary. Profiles can be created with ``eden config --push`` command (`see here for details <eden_profiles_>`_).
 
 GET /api/v1/delete
 """"""""""""""""""
 
 Required query parameters:
+
 - name: environment name
 
 Optional query parameters:
+
 - profile: eden profile to use (default value = ``default``). Profiles include all settings necessary. Profiles can be created with ``eden config --push`` command (`see here for details <eden_profiles_>`_).
 
 

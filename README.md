@@ -10,44 +10,28 @@
 
 Welcome to Baikonur!
 
-Baikonur is an open source [Terraform Modules](https://www.terraform.io/docs/modules/usage.html) project by [CyberAgent, Inc.](https://www.cyberagent.co.jp/en/) 
+Baikonur is an open source project that includes 
+[Terraform Modules](https://baikonur.dev/en/latest/repository_index.html), 
+[knowledge base](https://baikonur.dev/en/latest/knowledge_base/index.html), various infrastructure tools and more.
 
-Baikonur started as an internal project in 2018, and quickly grew to over 50 modules.
-We are releasing select most popular and unique modules here.
-
-Baikonur project name comes from [Baikonur Cosmodrome](https://en.wikipedia.org/wiki/Baikonur_Cosmodrome), 
-a spaceport located in Kazakhstan known for launching the first artificial satellite and the first human spaceflight.
-
-Modules released here are also published to Terraform Public Module Registry: [Baikonur top page](https://registry.terraform.io/modules/baikonur-oss).
+Baikonur started as an internal project at [CyberAgent, Inc.](https://www.cyberagent.co.jp/en/) in 2018, 
+and quickly grew to over 50 modules. 
+We started from open sourcing Baikonur started from releasing select most popular and unique internal Terraform Modules.
 
 ## Usage
-Follow instructions in repository READMEs or [Terraform Module Registry pages](https://registry.terraform.io/modules/baikonur-oss).
-Refer to examples in repositories, and don't forget to use proper [versioning](https://www.terraform.io/docs/configuration/modules.html#module-versions).
+
+Follow instructions in repository READMEs or 
+[Terraform Module Registry pages](https://registry.terraform.io/modules/baikonur-oss).
+Refer to examples in repositories, and don't forget to use proper 
+[version pinning](https://www.terraform.io/docs/configuration/modules.html#module-versions).
 
 ## Modules and tools
 
-- AWS
-  - [iam-nofile](https://github.com/baikonur-oss/terraform-aws-iam-nofile) - module to make it easier to create AWS IAM Roles. You can write role policy document with inline(heredoc) syntax, so you do not have to use [template rendering](https://www.terraform.io/docs/providers/template/d/file.html) in order to use variables.
+You can find repository index [here](https://baikonur.dev/en/latest/repository_index.html),
+or you can browse all repositories in [baikonur-oss organization](https://github.com/baikonur-oss).
 
-  - ECS modules
-    - [fargate-scheduled-task](https://github.com/baikonur-oss/terraform-aws-fargate-scheduled-task) - Create ECS scheduled tasks with CloudWatch Events easily. Useful for batches and other logic that runs on fixed routine.
-
-  - Modules for logging with Kinesis and Lambda
-    - [lambda-kinesis-to-fluent](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-fluent) - Kinesis Data Streams -> Fluent transfer
-    - [lambda-kinesis-to-s3](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-s3) - Kinesis Data Streams -> S3 transfer
-    - [lambda-kinesis-to-es](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-to-es) - Kinesis Data Streams -> Elasticsearch transfer
-    - [lambda-es-cleaner](https://github.com/baikonur-oss/terraform-aws-lambda-es-cleaner) - Old indices cleaner for Elasticsearch Service
-    - [lambda-kinesis-forward](https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-forward) - Kinesis Data Streams -> Kinesis Data Streams forwarder/router module
-
-  - eden (ECS Dynamic Environment Manager)
-    - [aws-eden-cli](https://github.com/baikonur-oss/aws-eden-cli) - eden CLI
-    - [lambda-eden-api](https://github.com/baikonur-oss/terraform-aws-lambda-eden-api) - eden API on Lambda
-    - [aws-eden-core](https://github.com/baikonur-oss/aws-eden-core) - eden core package (shared between CLI and API)
-    
-
-- GCP
-  - coming soon
-
+Terraform Modules released here are also published to 
+[Terraform Public Module Registry](https://registry.terraform.io/modules/baikonur-oss).
 
 ## Contributing
 PRs, issues, and any other form of feedback is very welcome in all repositories under baikonur-oss organization! :smile:
@@ -58,6 +42,4 @@ If you have a module you would like to donate to Baikonur, let us know in Issues
 
 ## License
 
-All repositories in this organization are provided on MIT license (see LICENSE file in repositories). 
-
-Baikonur logos are CC0.
+Consult LICENSE file in each individual repository. Baikonur logos are CC0.

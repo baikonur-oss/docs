@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CyberAgent, Inc.
+# This file is distributed under the same license as the Baikonur package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Torgayev Tamirlan <torgayev@me.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Baikonur\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-01 02:28+0900\n"
+"PO-Revision-Date: 2020-03-17 05:48+0000\n"
+"Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../faq.rst:2 64ce2cb10e0548a89e90cb3618e52097
+msgid "FAQ"
+msgstr "よくある質問"
+
+#: ../../faq.rst:5 e464207ce4264abc9dad463bdf044a2f
+msgid "Why is this project named \"Baikonur\"?"
+msgstr "このプロジェクトの名前がなぜ「Baikonur (バイコヌール)」になっていますか?"
+
+#: ../../faq.rst:7 5950896728e048a7b0441bed60e86daf
+msgid ""
+"Baikonur project name comes from `Baikonur Cosmodrome "
+"<https://en.wikipedia.org/wiki/Baikonur_Cosmodrome>`_, a spaceport located "
+"in Kazakhstan known for launching the first artificial satellite and the "
+"first human spaceflight. Hence, project logo is a space rocket."
+msgstr ""
+"Baikonur プロジェクトの名前は、人類初の人工衛星の打ち上げと人類初の有人宇宙飛行で知られるカザフスタンにある宇宙港である `バイコヌール宇宙基地"
+" <https://ja.wikipedia.org/wiki/バイコヌール宇宙基地>`_ "
+"に由来しています。そのため、プロジェクトのロゴはロケットです。"
+
+#: ../../faq.rst:11 4c6b3fc979e6425bb8cc7c71be540ea0
+msgid ""
+"The reason why we chose a space theme in the first place is quite simple - "
+"we followed `Ansible Galaxy <https://galaxy.ansible.com/>`_ and `GitHub "
+"Universe <https://githubuniverse.com/>`_."
+msgstr ""
+"そもそも宇宙のテーマを選んだ理由は非常に単純です。 `Ansible Galaxy <https://galaxy.ansible.com/>`_ と "
+"`GitHub Universe <https://githubuniverse.com/>`_ に倣いました。"
+
+#: ../../faq.rst:16 8a31cc3215904671874df0d5af4f9b23
+msgid "Is this project limited to Terraform Modules?"
+msgstr "このプロジェクトはTerraformモジュールに限定されていますか?"
+
+#: ../../faq.rst:18 1a1c1032cdc7490a918677066cc60a2a
+msgid ""
+"Absolutely not. Although Baikonur Project started as a platform for open "
+"sourcing internally used Terraform Modules, we have been creating Python "
+"libraries, CLI tools, and we are preparing to publish our infrastructure "
+"Knowledge Base."
+msgstr ""
+"いいえ。Baikonurプロジェクトは、サイバーエージェント社内で利用されていたTerraformモジュールのオープンソース化のためのプラットフォームとして始まりましたが、最近はPythonライブラリ、CLIツールをリリースし、インフラ周りのナレッジを公開する準備を進めています。"
+
+#: ../../faq.rst:23 c162b048d9ad480b9f02f907455d9089
+msgid ""
+"Do I have to be a CyberAgent employee to become a "
+"contributor/maintainer/core member?"
+msgstr "コントリビュータ/メンテナ/コアメンバーになるには、サイバーエージェントの従業員である必要がありますか?"
+
+#: ../../faq.rst:25 ba69e8c8131b4ba0903fa275677eceeb
+msgid "You do not *have to*. :)"
+msgstr "その *必要* はありません*。"

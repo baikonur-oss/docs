@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CyberAgent, Inc.
+# This file is distributed under the same license as the Baikonur package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Torgayev Tamirlan <torgayev@me.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Baikonur\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-01 03:25+0900\n"
+"PO-Revision-Date: 2020-03-17 05:48+0000\n"
+"Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../subprojects/baikonur_logging.rst:4 78454b65bbf24ab3a6a2fae135254fc1
+msgid "Baikonur Logging with Amazon Kinesis and AWS Lambda"
+msgstr "Amazon KinesisとAWS Lambdaを活用したBaikonurロギング"
+
+#: ../../subprojects/baikonur_logging.rst:7 e5b7036783404a59a3b0956b500ca58a
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../subprojects/baikonur_logging.rst:10 bbdd00a3f7d641d5b9953c7e2d75c2fe
+msgid "Why Kinesis?"
+msgstr "なぜKinesis?"
+
+#: ../../subprojects/baikonur_logging.rst:12 d4b578b5138148e2bee22eb0188fc875
+msgid ""
+"Kinesis Data Streams is a high-throughput, low latency, fully managed "
+"service for working with streaming data. A single shard provides `1 MB/s "
+"read and 2 MB/s write capacity <kinesis_quotas_>`_. Data put to a Kinesis "
+"Data Stream is saved for a period specified in the data retention period "
+"parameter. Thus, for capacity planning, it is enough to know peak data "
+"throughput."
+msgstr ""
+"Kinesis Data "
+"Streamsは、ストリーミングデータを扱うための高スループット、低レイテンシのフルマネージドサービスです。ストリームは複数のシャードから構築され、一つのシャードは、"
+" `1 MB/秒の読み取りと2 MB/秒の書き込みキャパシティを提供します <kinesis_quotas_>`_ 。 Kinesis Data "
+"Streamに書き込まれたデータは、データ保持期間パラメーターで指定された期間保存されます。したがって、キャパシティプランニングでは、格納、取り出しのピークスループットさえ知っていれば十分です。"
+
+#: ../../subprojects/baikonur_logging.rst:18 56aa16613a1847bbb0190831839c09b9
+msgid ""
+"Kinesis Data Streams do not have auto-scaling capabilities. You can have "
+"your Kinesis Data Stream shards scale automatically by using `amazon-"
+"kinesis-scaling-utils`_."
+msgstr ""
+"Kinesis Data Streamsにはオートスケーリング機能がありません。 `amazon-kinesis-scaling-utils`_ "
+"を使用すると、Kinesis Data Streamのシャード数を自動的に変更することができます。"
+
+#: ../../subprojects/baikonur_logging.rst:22 f884afb55f544dab934acab36a722fdd
+msgid "Why Kinesis with Lambda?"
+msgstr "なぜKinesisとLambda?"
+
+#: ../../subprojects/baikonur_logging.rst:24 2101c3e06a064a3087217ee1a9dcb4ce
+msgid ""
+"Using Lambda functions to process data on Kinesis Streams (with event source"
+" mapping) reduces the amount of code and resources you have to manage:"
+msgstr ""
+"Kinesis Data Streams上のデータを(イベントソースマッピングを用いて) "
+"Lambda関数で処理することで実装コストと管理コストを抑えることができます:"
+
+#: ../../subprojects/baikonur_logging.rst:27 61c60f71626e4eb29fa2a387033246db
+msgid "With Lambda, you do not have to manage servers, OS, etc."
+msgstr "Lambdaでは、サーバーやOSなどを管理する必要はありません。"
+
+#: ../../subprojects/baikonur_logging.rst:28 f05b90959d714c3196f5c2a882886888
+msgid ""
+"No need to write the logic for reading data from Kinesis Data Stream. Data "
+"batches are passed to Lambda functions on execution via ``event`` object."
+msgstr ""
+"Kinesis Data "
+"Streamsからデータを読み取るためのロジックを実装する必要はありません。データのバッチは、Lambda関数の実行時に``event``オブジェクトで渡されます。"
+
+#: ../../subprojects/baikonur_logging.rst:31 1f98f7d20a4346edb8bd2381b83334ca
+msgid ""
+"Event source mapping manages processed data position on Kinesis Data Stream "
+"for you. It keeps track of until what position on each shard data is already"
+" successfully processed. The position is only updated if Lambda finishes "
+"without errors."
+msgstr ""
+"イベントソースマッピングでは、Kinesis Data "
+"Stream上の処理済みデータの位置が自動的に管理されます（ポジション管理）。各シャードでどの位置までのデータが正常に処理済みかが記録されます。Lambdaの実行ががエラーなしで完了した場合にのみ、位置が更新されます。"
+
+#: ../../subprojects/baikonur_logging.rst:35 1fe6f3b6cf8f4f0db41975be9729cfc6
+msgid ""
+"If a Lambda function mapped to a Kinesis Data Stream finishes with an error,"
+" it is executed again with the same batch until execution succeeds or data "
+"expires. Records are removed from Kinesis Data Stream only when the data "
+"retention period for those records expires."
+msgstr ""
+"Kinesis Data "
+"StreamにマッピングされたLambda関数がエラーで終了した場合、実行が成功するか、データの期限が切れるまLambda関数が同じバッチで再度実行されます。データは保持期間が超過したときにのみKinesis"
+" Data Streamから削除されます。"
+
+#: ../../subprojects/baikonur_logging.rst:39 a492776c674441a89244550d24365d69
+msgid ""
+"Thus, you do not have to write retry logic in Lambda. Although, it may be a "
+"good idea to save data that is failing after n retries to a queue (or S3) "
+"and return without errors so that the data processing pipeline does not "
+"stop."
+msgstr ""
+"したがって、再試行ロジックを実装する必要はありません。ただし、同じバッチでLambdaが一定回数失敗し続けている場合、そのバッチをキュー(またはS3)に保存し、データ処理パイプラインが停止しないようにエラーなしで終了することをお勧めします。"
+
+#: ../../subprojects/baikonur_logging.rst:44 ca59ce676f6b4189894c76eed993789c
+msgid "Why use Kinesis and Lambda for logging?"
+msgstr "なぜロギングにKinesisとLambdaを活用するか?"
+
+#: ../../subprojects/baikonur_logging.rst:46 5e2e06c2e8a5454dbc79884a46e0bc9f
+msgid ""
+"Kinesis and Lambda combination can replace self-managed log clusters with "
+"managed services while retaining control of log procession."
+msgstr ""
+"KinesisとLambdaの連携により、ログ処理のコントロールを維持しながら、自前のロギングクラスターをマネージドサービスに置き換えることができます。"
+
+#: ../../subprojects/baikonur_logging.rst:49 3f419de404514c819d932dca6661acb3
+msgid ""
+"By using Kinesis with Lambda, we can create a modular, extendable, scalable "
+"logging architecture. Log transfer reliability may improve as well: data "
+"written to a Kinesis stream successfully will not get lost."
+msgstr ""
+"KinesisとLambdaを使うとで、モジュール式で拡張可能な、スケーラブルなロギングアーキテクチャが実現できます。ログ転送の信頼性を向上するメリットもあります。データがKinesis"
+" Data Streamに正常に書き込まれれば、欠損することはありません。"
+
+#: ../../subprojects/baikonur_logging.rst:53 ae57ec3cd4884ff6b489161a0960eff5
+msgid "Common Schema requirements"
+msgstr "共通スキーマ要件"
+
+#: ../../subprojects/baikonur_logging.rst:55 60d114f129364eec8994833def0b13eb
+msgid ""
+"“Baikonur Logging architecture\" is any architecture using Kinesis Data "
+"Streams in conjunction with one or more of the following Baikonur Logging "
+"Lambda modules:"
+msgstr ""
+"「Baikonurログ周りアーキテクチャ」とは、Kinesis Data "
+"Streamsと次のBaikonurログ周りLambdaモジュールを1つ以上の組み合わせを使っているものを指す。"
+
+#: ../../subprojects/baikonur_logging.rst:58 626495d630384989ad96d83a3bfa09db
+msgid "terraform-aws-lambda-kinesis-forward_"
+msgstr "terraform-aws-lambda-kinesis-forward_"
+
+#: ../../subprojects/baikonur_logging.rst:59 ff7dc48e56e74f4a9ceeeb0d545c5dcb
+msgid "terraform-aws-lambda-kinesis-to-es_"
+msgstr "terraform-aws-lambda-kinesis-to-es_"
+
+#: ../../subprojects/baikonur_logging.rst:60 c7f159acfdc34d258b6f12b479e67b19
+msgid "terraform-aws-lambda-kinesis-to-s3_"
+msgstr "terraform-aws-lambda-kinesis-to-s3_"
+
+#: ../../subprojects/baikonur_logging.rst:61 ea9db35cb92345cf9a7fead553b9382e
+msgid "terraform-aws-lambda-kinesis-to-fluent_"
+msgstr "terraform-aws-lambda-kinesis-to-fluent_"
+
+#: ../../subprojects/baikonur_logging.rst:63 bde889c957754d7fb71fe5babd989121
+msgid "These modules have the following Common Schema requirements:"
+msgstr "これらのモジュールには、次の共通スキーマ要件があります。"
+
+#: ../../subprojects/baikonur_logging.rst:65 0852ecc58c9f4e25a722211a1087f8a9
+msgid "All data must be JSON. The root element type must be an object."
+msgstr "すべてのデータはJSONである必要があります。ルート要素の型は ``object`` でなければなりません。"
+
+#: ../../subprojects/baikonur_logging.rst:66 418a5ae133874273aed0ba10d9ed7447
+msgid "All data must include the following keys:"
+msgstr "すべてのデータには、次のキーが含まれている必要があります。"
+
+#: ../../subprojects/baikonur_logging.rst:68 223d3c402df54d35bdba3f559d73e423
+msgid "Data type identifier. (default key name: ``log_type``)"
+msgstr "データ種類識別子 (デフォルトのキー名: ``log_type`` )"
+
+#: ../../subprojects/baikonur_logging.rst:69 2bb72c44b31a4a1793fda047ffa9a8db
+msgid ""
+"Any unique identifier, e.g. ``uuid.uuid4()`` (default key name: ``log_id``)"
+msgstr "一意の識別子。例: ``uuid.uuid4()`` (デフォルトのキー名: ``log_id`` )"
+
+#: ../../subprojects/baikonur_logging.rst:70 30f836da514b45ce8112301d33aa2f90
+msgid "Any timestamp supported by dateutil. (default key name: ``time``)"
+msgstr "dateutilでパース可能なタイムスタンプ (デフォルトのキー名: ``time`` )"
+
+#: ../../subprojects/baikonur_logging.rst:73 39e8b7e92344465fb66ec6443eb5d753
+msgid "All key names are customizable."
+msgstr "すべてのキー名はカスタマイズ可能です。"
+
+#: ../../subprojects/baikonur_logging.rst:75 1b24674e9cab47beaadca9a9333d5c25
+msgid "Common Schema requirements allow us for:"
+msgstr "共通スキーマ要件により、次のことが可能になります:"
+
+#: ../../subprojects/baikonur_logging.rst:77 1b80c73783c64c339d02b93105523471
+msgid "Easier parsing"
+msgstr "より簡単なパース"
+
+#: ../../subprojects/baikonur_logging.rst:78 a0089370ebc24895af0c5e1eee6cf1ab
+msgid "Better interoperability between different Lambda modules."
+msgstr "異なるLambdaモジュール間の互換性の向上"
+
+#: ../../subprojects/baikonur_logging.rst:80 b7bb7ce82db147978728ddca09f61677
+msgid "You can attach different modules to the same Kinesis Data Stream."
+msgstr "異なるモジュールを同じKinesis Data Streamに接続することができます。"
+
+#: ../../subprojects/baikonur_logging.rst:82 eaabaa37a758449f924a541413f60708
+msgid ""
+"Ability to create behavior based on keys that are part of Common Schema "
+"requirements:"
+msgstr "共通スキーマ要件のキーを使った機能を実装することができます:"
+
+#: ../../subprojects/baikonur_logging.rst:84 1f76448d2fc34e70af8ab1ff76ba6229
+msgid ""
+"One of the most important features is the ability to filter logs based on "
+"data type field value."
+msgstr "最も重要な機能の1つは、データ種類識別子の値に基づいたログのフィルタリング機能です。"
+
+#: ../../subprojects/baikonur_logging.rst:85 862d080a2ec84200a974d33e8edc56b5
+msgid ""
+"terraform-aws-lambda-kinesis-to-s3_ requires log_id to ensure filename "
+"uniqueness and time key to separate logs by date."
+msgstr ""
+"terraform-aws-lambda-kinesis-to-s3_ "
+"では、ファイル名の一意性を保証するためにlog_idが必要で、日付でログを仕分けるためにタイムスタンプフィールドを必要です。"
+
+#: ../../subprojects/baikonur_logging.rst:87 4e1a5544bde94b59aeaff5105e4a1932
+msgid ""
+"terraform-aws-lambda-kinesis-to-es_ requires time key to create daily "
+"indices in Elasticsearch (e.g. index-20200314)."
+msgstr ""
+"terraform-aws-lambda-kinesis-to-es_ "
+"では、Elasticsearchで日別のインデックスを作成するためにタイムスタンプが必要です (例: index-20200314)。"
+
+#: ../../subprojects/baikonur_logging.rst:91 e90ba4aac6af4bbc85750c4ebbbdcfdc
+msgid ""
+"As long as data meets Common Schema requirements, architectures and modules "
+"described in this documentation are applicable to any data transfer that "
+"needs to be fast and reliable, for example, inter-microservice "
+"communication."
+msgstr ""
+"データが共通スキーマ要件を満たしている限り、このページで説明されているアーキテクチャとモジュールは、高速で信頼性を担保する必要があるあらゆるデータ転送に適用できます。例えば、マイクロサービス間通信に活用できます。"
+
+#: ../../subprojects/baikonur_logging.rst:95 a7a655e5f5a3467c9fabf91b51a0c62e
+msgid "Architecture examples"
+msgstr "アーキテクチャ例"
+
+#: ../../subprojects/baikonur_logging.rst:98 e7317ac79a2d46adbf77157029b87708
+msgid "One stream - one destination"
+msgstr "1つストリーム - 1つの転送先"
+
+#: ../../subprojects/baikonur_logging.rst:100 32332b7bea9b44dc848586ed2d58c0a2
+msgid ""
+"Create a Kinesis Data Stream for each destination. For example, if we want "
+"to save all log data to S3 and only some to Elasticsearch, create two "
+"streams, deploy terraform-aws-lambda-kinesis-to-s3_ and terraform-aws-"
+"lambda-kinesis-to-es_ modules and map them to the respective streams::"
+msgstr ""
+"宛先ごとにKinesis Data "
+"Streamを作成します。たとえば、すべてのログデータをS3に保存し、一部のみをElasticsearchに保存する場合は、2つのストリームを作成し、 "
+"terraform-aws-lambda-kinesis-to-s3_ および terraform-aws-lambda-kinesis-to-es_ "
+"モジュールをデプロイしてマップします。それらをそれぞれのストリームに::"
+
+#: ../../subprojects/baikonur_logging.rst:112 41399f1eb66e44b28fa4f99353886db4
+msgid ""
+"If you want to save logs to both S3 and Elasticsearch, write data to both "
+"streams."
+msgstr "S3とElasticsearchの両方にログを保存する場合は、両方のストリームにデータを書き込みます。"
+
+#: ../../subprojects/baikonur_logging.rst:115 db1c7a9a2d6d4740952ed149f0434742
+msgid "One stream - multiple destinations"
+msgstr "1つのストリーム - 複数の転送先"
+
+#: ../../subprojects/baikonur_logging.rst:117 6d7eb61199c24d7ab0dea5de097ec828
+msgid ""
+"In the example above, we have to write logs we want to save to Elasticsearch"
+" to both streams. We can further improve this by adding terraform-aws-"
+"lambda-kinesis-to-s3_ to stream for Elasticsearch as well::"
+msgstr ""
+"上記の例では、Elasticsearchにログを保存するためには、両方のストリームに同じデータを書き込む必要があります。 "
+"Elasticsearch用のストリームに terraform-aws-lambda-kinesis-to-s3_ "
+"を追加することで、重複格納をなくすことができます:"
+
+#: ../../subprojects/baikonur_logging.rst:128 6e0db550c80248ffaaecc29e5e9061be
+msgid "Now we write each log event at most once."
+msgstr "これで、各ログイベント複数回格納されることはありません。"
+
+#: ../../subprojects/baikonur_logging.rst:133 7c2cb27f1ff14f049d263271adba72ae
+msgid "Kinesis routing pattern"
+msgstr "Kinesisルーティングパターン"
+
+#: ../../subprojects/baikonur_logging.rst:135 fe81a09d921a4830b94926afeb6086c6
+msgid ""
+"Write data to a single Kinesis stream (a “router”). Create multiple output "
+"streams, each for a destination. We can use forwarder modules (terraform-"
+"aws-lambda-kinesis-forward_) with whitelists to create an architecture "
+"similar to the `Publish-subscribe pattern "
+"<https://en.wikipedia.org/wiki/Publish–subscribe_pattern>`_, where a topic "
+"is a value in the type field, and each output stream represents a "
+"subscription group::"
+msgstr ""
+"一つのKinesisストリーム(「ルーター」、「親ストリーム」)にデータを書き込みます。さらに、転送先ごとに出力ストリームを作成します。転送モジュール "
+"( terraform-aws-lambda-kinesis-forward_ )を追加しホワイトリスを設定することで、 `出版-購読型モデル "
+"<https://ja.wikipedia.org/wiki/出版-購読型モデル>`_ "
+"に類似したアーキテクチャを作成できます。ここで、トピックはデータ種類識別子であり、出力ストリームは購読グループを表します::"
+
+#: ../../subprojects/baikonur_logging.rst:149 fd92ffd6a3f845c5a8e9d1951a57e14e
+msgid "This pattern may also be useful for inter-microservice communication."
+msgstr "このパターンはマイクロサービス間の通信にも活用できます。"
+
+#: ../../subprojects/baikonur_logging.rst:151 c29c3e6584284cedb0df641ce86fec2a
+msgid ""
+"Each of output streams may have their own Lambda modules or subscribers::"
+msgstr "各出力ストリームには、それぞれのLambdaモジュールの組み合わせや購読者を追加することが可能です::"
+
+#: ../../subprojects/baikonur_logging.rst:164 62395600597b4b5cbfd1a3f0bf6eb819
+msgid "Kinesis routing pattern with CloudWatch Logs subscription filters"
+msgstr "CloudWatch Logsサブスクリプションフィルタを活用したKinesisルーティングパターン"
+
+#: ../../subprojects/baikonur_logging.rst:166 66240234b42e452abd08da0ff07d4022
+msgid ""
+"In addition to `Kinesis Routing pattern <kinesis_routing_pattern_>`_, use "
+"CloudWatch Logs subscription filters to write data to the “router” stream. "
+"Doing so will free you from having to write PutRecord/PutRecords logic in "
+"your application if you already output logs to CloudWatch. For instance, if "
+"you are using awslogs logging driver in ECS, using subscription filter may "
+"look like this::"
+msgstr ""
+"`Kinesisルーティングパターン <kinesis_routing_pattern_>`_ "
+"をさらに拡張します。「ルーター」ストリームへのデータ格納をCloudWatch "
+"Logsサブスクリプションフィルタで行うよう変更します。これで、すでにログをCloudWatchに出力しているユースケースに置いて、アプリケーションでのPutRecord/PutRecordsの実装が必要がなくなります。たとえば、ECSでawslogsロギングドライバーを使用しているユースケースでは、出力先ロググループにサブスクリプションフィルタを設定すると、ログ周りアーキテクチャが次のようになります:"

@@ -1,0 +1,488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CyberAgent, Inc.
+# This file is distributed under the same license as the Baikonur package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Torgayev Tamirlan <torgayev@me.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Baikonur\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-01 00:09+0900\n"
+"PO-Revision-Date: 2020-03-17 05:48+0000\n"
+"Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../subprojects/eden.rst:4 eec97bde435042018baeac75c8233c1b
+msgid "eden: Amazon ECS Dynamic Environment Manager"
+msgstr "eden:  Amazon ECS動的環境マネージャ (Amazon ECS Dynamic Environment Manager)"
+
+#: ../../subprojects/eden.rst:6 0934ef8fe0fb4e059b36e0550f4effe0
+msgid ""
+"Clone Amazon ECS environments easily. Provide eden with a Amazon ECS service"
+" and eden will clone it."
+msgstr ""
+"Amazon ECSを使った環境を簡単に複製するためのツールです。 edenに参照するためのAmazon ECS "
+"Serviceを指定すると、edenがそれを複製します。"
+
+#: ../../subprojects/eden.rst:8 8ecbb402b470437ab2e830b3ef87b021
+msgid ""
+"eden is fast: create/delete commands should not take more than 5 seconds to "
+"run."
+msgstr "edenは高速です。作成/削除コマンドの実行は5秒以内に完了します。"
+
+#: ../../subprojects/eden.rst:11 f489af1d96fd44668d2d1ef73ad947ab
+msgid "Why?"
+msgstr "なぜ?"
+
+#: ../../subprojects/eden.rst:13 b7ed4a48b12147309e4bb9cf59b18dce
+msgid ""
+"eden is made for use cases, where many \"preview\" development environments "
+"are needed, but databases and other resources may be shared."
+msgstr "edenは、多くのプレビュー開発環境が必要だがデータベースやその他のリソースが共有可能なユースケースのために作られています。"
+
+#: ../../subprojects/eden.rst:17 57041e48463b420792aaef1245195bcc
+msgid "How?"
+msgstr "どうやって?"
+
+#: ../../subprojects/eden.rst:19 98e676b31f7244ebb1d17ae7f7393bcd
+msgid ""
+"eden clones Task Definition, ECS Service and Target Group from a reference "
+"service."
+msgstr "edenは、参照ECS Serviceからタスク定義、ECS Service、およびターゲットグループを複製します。"
+
+#: ../../subprojects/eden.rst:21 f647152380db4752a84e154c02bf0068
+msgid ""
+"eden uses one common ALB for all cloned services to save money and time (it "
+"can take up to 5 minutes to create an ALB). eden creates a Target Group, "
+"clones a service, attaches created Target Group to common ALB, and creates a"
+" Route 53 A ALIAS record pointing at common ALB."
+msgstr ""
+"edenは、すべてのクローンされたサービスに対して1つの共通ALBを使用することでコストと実行時間を削減します（ALBの作成には最大5分かかる場合があります）。"
+" edenはターゲットグループを作成し、サービスを複製します。作成したターゲットグループを共通のALBにアタッチし、共通のALBを指すRoute 53 "
+"A ALIASレコードを作成します。"
+
+#: ../../subprojects/eden.rst:27 9224fd61eaaf4986a28b3b46e1526d5e
+msgid "Resource creation order"
+msgstr "リソース作成順序"
+
+#: ../../subprojects/eden.rst:28 5ccb1dc1e894429daa3bfcdb384f3990
+msgid "ECS Task Definition"
+msgstr "ECSタスク定義"
+
+#: ../../subprojects/eden.rst:30 f969c89e7ad140b68a38483775179c8d
+msgid "Cloned from reference service"
+msgstr "参照サービスから複製"
+
+#: ../../subprojects/eden.rst:32 f2b80ff0612d412298c2932a5eefaf9e
+msgid "ALB Target Group"
+msgstr "ALBターゲットグループ"
+
+#: ../../subprojects/eden.rst:34 d728a8d87820478e8169152b5ff61d2e
+msgid ""
+"Settings are cloned from the Target Group attached to reference service"
+msgstr "設定は、参照サービスに接続されたターゲットグループからコピーされます"
+
+#: ../../subprojects/eden.rst:36 e0ec7536b8514268aff2c52eb441810f
+msgid "ECS Service"
+msgstr "ECSサービス"
+
+#: ../../subprojects/eden.rst:38 044cf687340f4e9b9d5a7bb1d622bda9
+msgid "Created in the same cluster as reference service"
+msgstr "参照サービスと同じクラスターに作成"
+
+#: ../../subprojects/eden.rst:40 dc28ad43804e4991a742d4128743ebb9
+msgid "ALB Listener Rule"
+msgstr "ALBリスナールール"
+
+#: ../../subprojects/eden.rst:42 dc28ad43804e4991a742d4128743ebb9
+msgid "Host Header rule"
+msgstr "ホストヘッダールール"
+
+#: ../../subprojects/eden.rst:44 05ce318beaba4f5db9f8ea2774aa67f2
+msgid "Route 53 A ALIAS record"
+msgstr "Route 53 A ALIASレコード"
+
+#: ../../subprojects/eden.rst:46 885463d0f621415f822c15d245c05d16
+msgid "Points at common ALB"
+msgstr "共通ALBを指す"
+
+#: ../../subprojects/eden.rst:48 6e332913132f444d85206dde693827b3
+msgid "An entry is added to environments JSON file"
+msgstr "Environments JSONファイルへの追加"
+
+#: ../../subprojects/eden.rst:51 8aa70637c39e49419ee0b528c1ab334d
+msgid ""
+"Resource deletion is performed in reverse order. Both creation and deletion "
+"should take no more than 5 seconds."
+msgstr "リソースの削除は逆の順序で実行されます。作成と削除のいずれもの実行が5秒以内に完了します。"
+
+#: ../../subprojects/eden.rst:55 caf93fc2814742c6b4625eaacf1697bd
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../subprojects/eden.rst:57 7b8e173d8fca4d57a189650be25d69aa
+msgid "Environments JSON file in a S3 bucket"
+msgstr "S3バケット内のEnvironments JSONファイル"
+
+#: ../../subprojects/eden.rst:59 d487d5fa51d8453290b1cb69172c8caa
+msgid "Structure and details are described `here <eden_envs_json_>`_"
+msgstr "ファイル構成や詳細は `こちら <eden_envs_json_>`_ で説明されています。"
+
+#: ../../subprojects/eden.rst:61 9780628b85904b2b8398408244ac42de
+msgid "A reference ECS Service with Target Group Attached"
+msgstr "ターゲットグループがアタッチされた参照先となるECSサービス"
+
+#: ../../subprojects/eden.rst:63 16360eed79654fb1baecaed553b832f6
+msgid "A common ALB for services managed by eden"
+msgstr "edenが管理するサービスのための共通ALB"
+
+#: ../../subprojects/eden.rst:65 180342e4716e4e9b9c59de980d546029
+msgid "Will be reused by all environments with Host Header Listener Rules"
+msgstr "ホストヘッダーリスナールールを用いて全ての環境によって再利用されるます"
+
+#: ../../subprojects/eden.rst:66 f969c89e7ad140b68a38483775179c8d
+msgid "Separate from what reference service uses"
+msgstr "参照サービスが使用するものとは別のもの"
+
+#: ../../subprojects/eden.rst:67 a4d6b8c7d8ce46fc9f56c956c72478fa
+msgid "Must have HTTPS Listener"
+msgstr "HTTPSリスナーが必要です"
+
+#: ../../subprojects/eden.rst:68 55793af7fafe45a28ab7079689fff0d0
+msgid "Listener must have wildcard certificate for target dynamic zone"
+msgstr "リスナーには、ターゲットダイナミックゾーンのワイルドカード証明書が必要です"
+
+#: ../../subprojects/eden.rst:70 e0a99ba175d44350861971e13bfd59ad
+msgid "Simple ALB usage"
+msgstr "単純なALBの利用"
+
+#: ../../subprojects/eden.rst:72 357baabc87ee45cc81e867adb89839ff
+msgid "No multiple path rules etc."
+msgstr "複数のパスルールを利用しない、など"
+
+#: ../../subprojects/eden.rst:73 e0ec7536b8514268aff2c52eb441810f
+msgid "One ALB per one ECS Service"
+msgstr "1つのECSサービスごとに1つのALB"
+
+#: ../../subprojects/eden.rst:76 0138322d365e4c34840f54c6e8727c7e
+msgid "Preparations"
+msgstr "準備"
+
+#: ../../subprojects/eden.rst:78 2bdc2f023ed5498a98e414c613e16d06
+msgid "Under construction"
+msgstr "工事中"
+
+#: ../../subprojects/eden.rst:86 023f2ccc02084e8fb1c85d3cae5e32b8
+msgid "Environments JSON file"
+msgstr "Environments JSONファイル"
+
+#: ../../subprojects/eden.rst:88 7b8e173d8fca4d57a189650be25d69aa
+msgid "The Environments JSON file is used to:"
+msgstr "Environments JSONファイルは次の目的で使用されます:"
+
+#: ../../subprojects/eden.rst:90 9f71d19cb1a346388481f002a8e8d5d6
+msgid "Check what environments exist and where their endpoints are"
+msgstr "存在する環境とそのエンドポイントの確認"
+
+#: ../../subprojects/eden.rst:91 d5567b415f124631a2492c71b52de4cf
+msgid "Tell client apps what is available"
+msgstr "クライアントアプリケーションに利用可能な環境を知らせる"
+
+#: ../../subprojects/eden.rst:93 f48bebc398cd463cba0685ffe71f2461
+msgid "Environments JSON file example:"
+msgstr "Environments JSONファイルの例:"
+
+#: ../../subprojects/eden.rst:107 e81fd46e2d9c4121ad81dd7810585ae0
+msgid ""
+"Example above presumes ``config_update_key = api_endpoint``. You can create "
+"environments with the same names, but with profiles with different "
+"``config_update_key`` settings to have multiple endpoints within a single "
+"environment. For example, you may want to have an API, administration tool, "
+"and a frontend service created as a single environment."
+msgstr ""
+"上記の例では、 ``config_update_key = api_endpoint`` を前提としています。同じ名前の環境を作成できますが、 "
+"``config_update_key`` "
+"設定が異なるプロファイルを使用する必要はあります。1つの環境内に複数のエンドポイントが作成されます。たとえば、API、管理ツール、フロントエンドサービスなどの複数のマイクロサービスを一つの環境として作成したい時にの使い方は有用です。"
+
+#: ../../subprojects/eden.rst:112 a3763705087a4ac7a77cee0601165b17
+msgid "Your environment file could look like this:"
+msgstr "このとき、Environments JSONファイルは以下のようになります:"
+
+#: ../../subprojects/eden.rst:135 957e948c67d6493b968139f737628ce4
+msgid "CLI and API"
+msgstr "CLIとAPI"
+
+#: ../../subprojects/eden.rst:137 9b194092b01346389fcdea503bcad0a5
+msgid ""
+"eden is provided in two flavors: `CLI <aws-eden-cli_>`_ and `API <lambda-"
+"eden-api_>`_."
+msgstr "edenは `CLI <aws-eden-cli_>`_ と `API <lambda-eden-api_>`_ として利用できます。"
+
+#: ../../subprojects/eden.rst:139 5583ffe12add4a4eb8a9976e01b3c612
+msgid ""
+"We recommend trying eden out with CLI, and when you feel you are ready to "
+"make eden part of your CI/CD pipeline, switch to API. Please note that you "
+"will need to use CLI to push `profiles <eden_profiles_>`_ for API."
+msgstr ""
+"まず、eden CLIを試すことをお勧めします。edenをCI/CDパイプラインに追加する準備ができたら、eden "
+"APIの利用を推奨します。APIのための `プロファイル <eden_profiles_>`_ のプッシュにはCLIが必要であることに注意してください。"
+
+#: ../../subprojects/eden.rst:144 883903bc8c484c28b691652806d896f5
+msgid "Installing eden CLI"
+msgstr "eden CLIのインストール"
+
+#: ../../subprojects/eden.rst:165 ad8ce757b5db47209c7d12a903620c9f
+msgid "Hint: you can use -h on subcommands as well:"
+msgstr "ヒント：サブコマンドでも-hを使用できます。"
+
+#: ../../subprojects/eden.rst:197 9000123f224241889325e055b72e279d
+msgid "Configuring eden CLI"
+msgstr "eden CLIの設定"
+
+#: ../../subprojects/eden.rst:199 08081b6d291e42668df688fdd2e724a0
+msgid ""
+"Let's create a profile to work with, so we won't have to specify all the "
+"parameters every time:"
+msgstr ""
+"まず、プロファイルを作成してみましょう。プロファイルを利用すれば、コマンドを実行する際に毎回すべてのパラメーターを指定する必要がなくなり、プロファイル名の指定のみで十分です。"
+
+#: ../../subprojects/eden.rst:215 8e3edd910e404d15afd26f389aa29d3e
+msgid ""
+"Configuration is saved to ``~/.eden/config``. Commands above created a "
+"\"default\" profile:"
+msgstr ""
+"設定は ``~/.eden/config`` に保存されます。上記のコマンドで ``default`` というプロファイルが作成されました:"
+
+#: ../../subprojects/eden.rst:235 7b9715f3481f4bd48740c832dc97b8fb
+msgid "Don't forget to check configuration file integrity:"
+msgstr "設定ファイルの整合性をチェックしましょう:"
+
+#: ../../subprojects/eden.rst:245 2c9fda6e82ca475b8dd5eab60092e100
+msgid "Profiles in eden"
+msgstr "edenのプロファイル"
+
+#: ../../subprojects/eden.rst:247 943515adcddd47f1938fa293333045e3
+msgid ""
+"You can create multiple profiles in configuration and specify a profile to "
+"use with ``-p profile_name`` for all commands."
+msgstr ""
+"複数のプロファイルを使用できます。設定で複数のプロファイルを作成し、コマンドを実行する際にの ``-p プロファイル名`` "
+"で使用するプロファイルを指定できます。"
+
+#: ../../subprojects/eden.rst:254 8d835f29e0104b7ab5b60c42a3f82cf6
+msgid "We can push profiles to DynamoDB for use by eden API:"
+msgstr "ローカルプロファイルをリモート(DynamoDB)にプッシュすることでeden APIでそのプロファイルが使用できるようになります。"
+
+#: ../../subprojects/eden.rst:263 8944c68d3829472d9e5c1b171595ca8c
+msgid "If eden table does not exist, eden CLI will create it"
+msgstr "edenのリモートテーブル (DynamoDB)が存在しない場合、eden CLIがテーブルを自動的に作成します"
+
+#: ../../subprojects/eden.rst:265 4fe8cba698374fd188cba141070bbd70
+msgid ""
+"Use the same command to overwrite existing profiles (push to existing "
+"profile will result in overwrite):"
+msgstr "同じコマンドで既存のプロファイルが上書きされます (既存のプロファイルにプッシュすると上書きされます):"
+
+#: ../../subprojects/eden.rst:272 d62aed10817043deaf4fc5e56270e071
+msgid "Use remote-rm to delete remote profiles:"
+msgstr "remote-rmコマンドでリモートのプロファイルを削除することができます:"
+
+#: ../../subprojects/eden.rst:280 712856964ef2405bbaa80b5985d9f8e7
+msgid "Execute commands"
+msgstr "コマンドの実行"
+
+#: ../../subprojects/eden.rst:282 2d16765dadd5461cbf48a021adf6b08e
+msgid "Create an environment:"
+msgstr "環境を作成します:"
+
+#: ../../subprojects/eden.rst:306 5842f2afdbf14ec89127046b21b4fe5e
+msgid ""
+"Create and delete commands update remote state DynamoDB Table. As with "
+"``eden config push``, table will be created for you if it does not exist."
+msgstr ""
+"create、deleteコマンドは、リモートステート(DynamoDBテーブル)を更新します。 ``eden config push`` "
+"と同様に、テーブルが存在しない場合、テーブルが自動的に作成されます。"
+
+#: ../../subprojects/eden.rst:309 8642d1b670574ba49966115bb5898a3a
+msgid "Check creation:"
+msgstr "作成の確認:"
+
+#: ../../subprojects/eden.rst:318 b5274b4a53b54f1f875f45e4c3552fea
+msgid ""
+"This list is generated from remote state DynamoDB Table and not "
+"`environments JSON <eden_envs_json_>`_ file. Last updated timestamp is "
+"updated on creation and deploys as well."
+msgstr ""
+"この一覧は、 `Environments JSON <eden_envs_json_>`_ "
+"ファイルではなく、リモートステートのDynamoDBテーブルから生成されます。最後に更新されたタイムスタンプは、createでの環境の新規作成、すでに存在する環境へのデプロイで更新されます。"
+
+#: ../../subprojects/eden.rst:322 4b45d88cd94b46d996da9b204c391d46
+msgid "Delete environment and check deletion:"
+msgstr "環境を削除し、削除を確認します:"
+
+#: ../../subprojects/eden.rst:344 ff28caa8032b4df09415bb521eaa271b
+msgid "Moving to API"
+msgstr "APIへの移行"
+
+#: ../../subprojects/eden.rst:346 75fb422ebfb04331ae1a1ed2c0743a8e
+msgid ""
+"Both CLI and API manage their state in a DynamoDB Table. This table is only "
+"created by CLI. Furthermore, API can only use \"remote profiles\", saved in "
+"state table. Before running API, make sure you pushed a profile to use with "
+"API by running ``eden config --push``. If this table does not exist during "
+"API creation in Terraform, terraform apply will fail."
+msgstr ""
+"CLIとAPIの両方がDynamoDBテーブルでステートを管理します。このテーブルはCLIによってのみ作成されます。また、APIはリモートステートに格納されたプロファイルのみを使用できます。"
+" APIを初めて実行する前に、 ``eden config --push`` "
+"を実行して、APIのためのプロファイルをプッシュしてください。TerraformでAPIを構築する際に、リモートステートテーブルが存在しない場合、terraform"
+" applyの実行が失敗します。"
+
+#: ../../subprojects/eden.rst:352 fdeb838f277048ea9e1878f401d33963
+msgid "API internals"
+msgstr "API内部"
+
+#: ../../subprojects/eden.rst:354 fd758746341c4fabb6227bf5e31b19f9
+msgid "eden API consists of:"
+msgstr "eden APIは以下の要素で構成されます:"
+
+#: ../../subprojects/eden.rst:356 a9929a7fab2249a7849e16ba5a133c56
+msgid "Lambda function (the API itself)"
+msgstr "Lambda関数(API本体)"
+
+#: ../../subprojects/eden.rst:357 c6ef33eeac43454fb1700289b5fcb39f
+msgid "API Gateway with API key for protecting API"
+msgstr "APIゲートウェイとAPIを保護するためのAPIキー"
+
+#: ../../subprojects/eden.rst:358 ad6ab997477f4b4686ee0959b93966c1
+msgid "DynamoDB Table for state management"
+msgstr "ステート管理用のDynamoDBテーブル"
+
+#: ../../subprojects/eden.rst:360 ad6ab997477f4b4686ee0959b93966c1
+msgid "Default table name is eden."
+msgstr "デフォルトのテーブル名は「eden」です。"
+
+#: ../../subprojects/eden.rst:368 750eab187af94fb2a3e556dc6a2e54ea
+msgid "Creating eden API with Terraform"
+msgstr "Terraformを使用したeden APIの構築"
+
+#: ../../subprojects/eden.rst:390 933a6a4847194528962d96316d35b4f7
+msgid ""
+"DynamoDB table for state management is created by eden CLI. Make sure to run"
+" ``eden config --push`` with success at least once before terraform apply."
+msgstr ""
+"ステート管理のためのDynamoDBテーブルはeden CLIによって作成されます。 ``terraform apply`` を実行する前に、一度 "
+"``eden config --push`` を実行してください。"
+
+#: ../../subprojects/eden.rst:393 ff0f49ef41054036920805ab4f84fa99
+msgid ""
+"With multiple profiles, one eden API instance is enough for one "
+"account/region. Refer to `profile section <eden_profiles_>`_ for more "
+"details."
+msgstr ""
+"複数のプロファイルを使うことで、1つのアカウント/リージョンに対して1つのeden APIで十分です。詳しくは `プロファイル "
+"<eden_profiles_>`_ セクションを参照してください。"
+
+#: ../../subprojects/eden.rst:397 93851fcc96c44b68abbfa1d474d54f8c
+msgid "eden API commands"
+msgstr "eden APIのコマンド"
+
+#: ../../subprojects/eden.rst:399 207b9d5479b54cc39d965dfdaa8ab10e
+msgid "eden has only two API commands: create and delete."
+msgstr "eden APIには、createとdeleteという2つのAPIコマンドのみあります。"
+
+#: ../../subprojects/eden.rst:402 285667a6e9754e339e1d8cf1bd1fff29
+msgid "GET /api/v1/create"
+msgstr "GET /api/v1/create"
+
+#: ../../subprojects/eden.rst:404 ../../subprojects/eden.rst:416
+#: 58b7d47fc76b4e81bd5a40345feb3d85 58b7d47fc76b4e81bd5a40345feb3d85
+msgid "Required query parameters:"
+msgstr "必須クエリパラメータ:"
+
+#: ../../subprojects/eden.rst:406 ../../subprojects/eden.rst:418
+#: 58b7d47fc76b4e81bd5a40345feb3d85 58b7d47fc76b4e81bd5a40345feb3d85
+msgid "name: environment name"
+msgstr "name: 環境名"
+
+#: ../../subprojects/eden.rst:407 584b9119fd55479f89eb78ba30e8485b
+msgid ""
+"image_uri: ECR image URI to deploy, must be already pushed and must be in "
+"the same account (eden API will check for image availability before "
+"deploying)"
+msgstr ""
+"image_uri: デプロイするECRイメージのURI。すでにECRにプッシュされ、同じアカウントにある必要があります(eden "
+"APIは、デプロイ前にイメージURIが有効であるかを確認します)"
+
+#: ../../subprojects/eden.rst:409 ../../subprojects/eden.rst:420
+#: 58b7d47fc76b4e81bd5a40345feb3d85 58b7d47fc76b4e81bd5a40345feb3d85
+msgid "Optional query parameters:"
+msgstr "任意のクエリパラメータ:"
+
+#: ../../subprojects/eden.rst:411 ../../subprojects/eden.rst:422
+#: cfbcea22f3404682ac571c0a69009a2a cfbcea22f3404682ac571c0a69009a2a
+msgid ""
+"profile: eden profile to use (default value = ``default``). Profiles include"
+" all settings necessary. Profiles can be created with ``eden config --push``"
+" command (`see here for details <eden_profiles_>`_)."
+msgstr ""
+"profile: edenのリモートプロファイルの指定 (デフォルト値は ``default`` "
+")。プロファイルには、コマンドを実行するために必要なすべての設定が含まれています。リモートプロファイルは ``eden config --push`` "
+"コマンドで作成できます(詳細は `こちら <eden_profiles_>`_ を参照)。"
+
+#: ../../subprojects/eden.rst:414 1a6f9a99599940409b29c7e84c799132
+msgid "GET /api/v1/delete"
+msgstr "GET /api/v1/delete"
+
+#: ../../subprojects/eden.rst:426 a1470aa9741b4217bd0608bc18e3fec7
+msgid "eden API Keys"
+msgstr "eden APIキー"
+
+#: ../../subprojects/eden.rst:427 2168602e142f4748aed41bab367ca9e8
+msgid ""
+"eden API Terraform module creates one API Key for you. You can check it from"
+" API Gateway console."
+msgstr ""
+"eden API Terraformモジュールは、1つのAPIキーを作成します。API GatewayコンソールからAPIキーが確認できます。"
+
+#: ../../subprojects/eden.rst:430 9f34c95cb4564055ac74d3cc9022b206
+msgid "You will need to specify this key to access API."
+msgstr "APIにアクセスするには、このキーを指定しなければなりません。"
+
+#: ../../subprojects/eden.rst:432 f7e2bde0cec64f66a487ff9d78677b67
+msgid "Key must be provided as an HTTP header::"
+msgstr "APIキーをHTTPヘッダーとして指定する必要があります::"
+
+#: ../../subprojects/eden.rst:438 96c286144ffd416f92152ae68136a680
+msgid "API example"
+msgstr "API使用例"
+
+#: ../../subprojects/eden.rst:440 6199d9c2577a495ab006cbb67a54befb
+msgid "Let's run create API (with a remote profile called ``api``):"
+msgstr "``api`` という名前のリモートプロファイルを使ってcreate APIを実行してみましょう:"
+
+#: ../../subprojects/eden.rst:446 919f6183048d426b811c229dd5e9dbed
+msgid "Now let's look at logs that API Lambda Function has produced:"
+msgstr "APIのLambda関数が出力したログを見てみましょう:"
+
+#: ../../subprojects/eden.rst:464 be2dc56356bb43c488a10b4d5c80380c
+msgid ""
+"As state is managed in a remote DynamoDB table, you can check creation using"
+" eden CLI:"
+msgstr "環境のステートがリモートのDynamoDBテーブルで管理されているため、eden CLIで環境の作成を確認できます:"
+
+#: ../../subprojects/eden.rst:472 cb76ef688e364040a243c2808bcfa265
+msgid "Now let's delete this environment by running:"
+msgstr "次のコマンドを実行して、この環境を削除しましょう:"
+
+#: ../../subprojects/eden.rst:478 a3763705087a4ac7a77cee0601165b17
+msgid "API Lambda logs will look like this:"
+msgstr "API Lambdaログは次のようになります:"

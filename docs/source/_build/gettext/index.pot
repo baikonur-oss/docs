@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 14:44+0900\n"
+"POT-Creation-Date: 2020-04-01 03:13+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,12 +28,12 @@ msgstr ""
 
 #: ../../index.rst:19
 #: 9b8837026c1144449fa7272684a2e033
-msgid "Baikonur is an open source project that includes `Terraform Modules`_, knowledge base, various infrastructure tools and more."
+msgid "Baikonur is an open source project that includes `Terraform Modules <https://baikonur.dev/en/latest/repository_index.html>`_, knowledge base, various infrastructure tools and more."
 msgstr ""
 
 #: ../../index.rst:22
 #: 621068996dcc4813abca43e6f436e219
-msgid "Baikonur started as an internal project at `CyberAgent, Inc.`_ in 2018, and quickly grew to over 50 modules. We started from open sourcing Baikonur started from releasing select most popular and unique internal Terraform Modules."
+msgid "Baikonur started as an internal project at `CyberAgent, Inc. <https://www.cyberagent.co.jp/en/>`_ in 2018, and quickly grew to over 50 modules. We started from open sourcing Baikonur started from releasing select most popular and unique internal Terraform Modules."
 msgstr ""
 
 #: ../../index.rst:25
