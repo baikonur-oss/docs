@@ -136,7 +136,9 @@ CLI and API
 
 eden is provided in two flavors: `CLI <aws-eden-cli_>`_ and `API <lambda-eden-api_>`_.
 
-We recommend trying eden out with CLI, and when you feel you are ready to make eden part of your CI/CD pipeline.
+We recommend trying eden out with CLI, and when you feel you are ready to make eden part of your CI/CD pipeline,
+switch to API.
+Please note that you will need to use CLI to push `profiles <eden_profiles_>`_ for API.
 
 Installing eden CLI
 ^^^^^^^^^^^^^^^^^^^
@@ -258,7 +260,7 @@ We can push profiles to DynamoDB for use by eden API:
     Successfully pushed profile api to DynamoDB
 
 .. note::
-    If eden table does not exist, aws-eden-cli will create it
+    If eden table does not exist, eden CLI will create it
 
 Use the same command to overwrite existing profiles (push to existing profile will result in overwrite):
 
@@ -354,6 +356,7 @@ eden API consists of:
 1. Lambda function (the API itself)
 2. API Gateway with API key for protecting API
 3. DynamoDB Table for state management
+
    - Default table name is eden.
 
 .. _`aws-eden-cli`: https://github.com/baikonur-oss/aws-eden-cli
@@ -370,7 +373,7 @@ Creating eden API with Terraform
       source  = "baikonur-oss/lambda-eden-api/aws"
       version = "0.2.0"
 
-      lambda_package_url = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
+      lambda_package_url    = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
       name                  = "eden"
 
        # eden API Gateway variables
@@ -380,11 +383,11 @@ Creating eden API with Terraform
 
       endpoints_bucket_name = "somebucket"
 
-      dynamic_zone_id       = "${data.aws_route53_zone.dynamic.zone_id}"
+      dynamic_zone_id = "${data.aws_route53_zone.dynamic.zone_id}"
     }
 
 .. warning::
-   DynamoDB table for state management is created by aws-eden-cli.
+   DynamoDB table for state management is created by eden CLI.
    Make sure to run ``eden config --push`` with success at least once before terraform apply.
 
 With multiple profiles, one eden API instance is enough for one account/region.
@@ -399,19 +402,23 @@ GET /api/v1/create
 """"""""""""""""""
 
 Required query parameters:
+
 - name: environment name
 - image_uri: ECR image URI to deploy, must be already pushed and must be in the same account (eden API will check for image availability before deploying)
 
 Optional query parameters:
-- profile: default value = "default". eden profile to use. Profiles include all settings necessary. Profiles can be created with `eden config --push` command. Refer to aws-eden-cli examples for more details.
+
+- profile: eden profile to use (default value = ``default``). Profiles include all settings necessary. Profiles can be created with ``eden config --push`` command (`see here for details <eden_profiles_>`_).
 
 GET /api/v1/delete
 """"""""""""""""""
 
 Required query parameters:
+
 - name: environment name
 
 Optional query parameters:
+
 - profile: eden profile to use (default value = ``default``). Profiles include all settings necessary. Profiles can be created with ``eden config --push`` command (`see here for details <eden_profiles_>`_).
 
 
