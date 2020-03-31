@@ -373,13 +373,13 @@ Creating eden API with Terraform
       source  = "baikonur-oss/lambda-eden-api/aws"
       version = "0.2.0"
 
-      lambda_package_url    = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
-      name                  = "eden"
+      lambda_package_url = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
+      name               = "eden"
 
-       # eden API Gateway variables
-      api_acm_certificate_arn     = "${data.aws_acm_certificate.wildcard.arn}"
-      api_domain_name             = "${var.env}-eden.${data.aws_route53_zone.main.name}"
-      api_zone_id                 = "${data.aws_route53_zone.main.zone_id}"
+      # eden API Gateway variables
+      api_acm_certificate_arn = "${data.aws_acm_certificate.wildcard.arn}"
+      api_domain_name         = "${var.env}-eden.${data.aws_route53_zone.main.name}"
+      api_zone_id             = "${data.aws_route53_zone.main.zone_id}"
 
       endpoints_bucket_name = "somebucket"
 
