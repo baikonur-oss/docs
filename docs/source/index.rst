@@ -10,16 +10,16 @@ Welcome to Baikonur!
    :width: 900px
    :alt: Baikonur OSS Project logo
    :align: center
-   :target: `Baikonur OSS project`_
 
 
 What is Baikonur?
 -----------------
 
-Baikonur is an open source project that includes `Terraform Modules <https://baikonur.dev/en/latest/repository_index.html>`_, knowledge base, various infrastructure tools
-and more.
+Baikonur is an open source project that includes `Terraform Modules <https://baikonur.dev/en/latest/repository_index.html>`_,
+knowledge base, various infrastructure tools and more.
 
-Baikonur started as an internal project at `CyberAgent, Inc. <https://www.cyberagent.co.jp/en/>`_ in 2018, and quickly grew to over 50 modules.
+Baikonur started as an internal project at `CyberAgent, Inc. <https://www.cyberagent.co.jp/en/>`_ in 2018,
+and quickly grew to over 50 modules.
 We started from open sourcing Baikonur started from releasing select most popular and unique internal Terraform Modules.
 
 Terraform Modules released here are also published to `Terraform Public Module Registry`_.
@@ -38,7 +38,6 @@ Contents
    subprojects/eden
 
 
-
 License
 -------
 .. include:: ../../LICENSE
@@ -49,5 +48,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`search`
 
-.. _`Baikonur OSS project`: https://github.com/baikonur-oss/docs
 .. _`Terraform Public Module Registry`: https://registry.terraform.io/modules/baikonur-oss

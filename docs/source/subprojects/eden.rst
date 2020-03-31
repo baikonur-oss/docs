@@ -105,9 +105,20 @@ Environments JSON file example:
     }
 
 Example above presumes ``config_update_key = api_endpoint``.
-You can create environments with the same names, but with profiles with different ``config_update_key`` settings to have
-multiple endpoints within a single environment.
+
+You can create multiple environments with the same names, but with profiles with different ``config_update_key`` settings
+to have multiple endpoints within a single environment.
 For example, you may want to have an API, administration tool, and a frontend service created as a single environment.
+
+Let's say we have three profiles, ``api``, ``admin``, and ``frontend``.
+These profiles are pre-configured with ``config_update_key`` equal to
+``api_endpoint``, ``admin_endpoint``, ``frontend_endpoint`` respectively.
+
+.. code-block:: console
+
+    $ eden create -p api --name foo --image-uri xxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com/api:latest
+    $ eden create -p admin --name foo --image-uri xxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com/admin:latest
+    $ eden create -p frontend --name foo --image-uri xxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com/frontend:latest
 
 Your environment file could look like this:
 
@@ -125,8 +136,15 @@ Your environment file could look like this:
         ]
     }
 
-..
-  TODO: Show how to create something like above in eden
+Multiple endpoints exist in a single JSON object within a same environment name in environments JSON file.
+This environment entry will be removed from environments JSON file when last endpoint is deleted.
+
+
+.. warning::
+
+    When working with multiple endpoints in a single environment like in example above, keep in mind that endpoint
+    creation/deletion time difference may result in incomplete environments (not having all necessary endpoints).
+
 
 ..
   TODO: Make envs JSON optional
@@ -373,13 +391,13 @@ Creating eden API with Terraform
       source  = "baikonur-oss/lambda-eden-api/aws"
       version = "0.2.0"
 
-      lambda_package_url    = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
-      name                  = "eden"
+      lambda_package_url = "https://github.com/baikonur-oss/terraform-aws-lambda-eden-api/releases/download/v0.2.0/lambda_package.zip"
+      name               = "eden"
 
-       # eden API Gateway variables
-      api_acm_certificate_arn     = "${data.aws_acm_certificate.wildcard.arn}"
-      api_domain_name             = "${var.env}-eden.${data.aws_route53_zone.main.name}"
-      api_zone_id                 = "${data.aws_route53_zone.main.zone_id}"
+      # eden API Gateway variables
+      api_acm_certificate_arn = "${data.aws_acm_certificate.wildcard.arn}"
+      api_domain_name         = "${var.env}-eden.${data.aws_route53_zone.main.name}"
+      api_zone_id             = "${data.aws_route53_zone.main.zone_id}"
 
       endpoints_bucket_name = "somebucket"
 
