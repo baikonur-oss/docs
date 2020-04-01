@@ -21,7 +21,6 @@ project = 'Baikonur'
 copyright = '2020, CyberAgent, Inc.'
 author = 'CyberAgent, Inc.'
 
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -37,7 +36,6 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -65,5 +63,6 @@ master_doc = "index"
 gettext_uuid = True
 gettext_compact = False
 
+gettext_auto_build = True
 
 locale_dirs = ['../../locale/']

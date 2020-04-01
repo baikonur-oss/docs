@@ -2,37 +2,37 @@
 host = https://www.transifex.com
 
 [baikonur-docs.docs-source-build-gettext-faq-pot--master]
-file_filter = translations/baikonur-docs.docs-source-build-gettext-faq-pot--master/<lang>.po
+file_filter = locale/<lang>/LC_MESSAGES/faq.po
 source_lang = en
 type = PO
 
 [baikonur-docs.docs-source-build-gettext-index-pot--master]
-file_filter = translations/baikonur-docs.docs-source-build-gettext-index-pot--master/<lang>.po
+file_filter = locale/<lang>/LC_MESSAGES/index.po
 source_lang = en
 type = PO
 
 [baikonur-docs.docs-source-build-gettext-repository-index-pot--master]
-file_filter = translations/baikonur-docs.docs-source-build-gettext-repository-index-pot--master/<lang>.po
+file_filter = locale/<lang>/LC_MESSAGES/repository_index.po
 source_lang = en
 type = PO
 
 [baikonur-docs.docs-source-build-gettext-knowledge-base-index-pot--master]
-file_filter = translations/baikonur-docs.docs-source-build-gettext-knowledge-base-index-pot--master/<lang>.po
+file_filter = locale/<lang>/LC_MESSAGES/knowledge_base/index.po
 source_lang = en
 type = PO
 
 [baikonur-docs.docs-source-build-gettext-subprojects-baikonur-logging-pot--master]
-file_filter = translations/baikonur-docs.docs-source-build-gettext-subprojects-baikonur-logging-pot--master/<lang>.po
+file_filter = locale/<lang>/LC_MESSAGES/subprojects/baikonur_logging.po
 source_lang = en
 type = PO
 
 [baikonur-docs.docs-source-build-gettext-subprojects-eden-pot--master]
-file_filter = translations/baikonur-docs.docs-source-build-gettext-subprojects-eden-pot--master/<lang>.po
+file_filter = locale/<lang>/LC_MESSAGES/subprojects/eden.po
 source_lang = en
 type = PO
 
 [baikonur-docs.readme-md--master]
-file_filter = translations/baikonur-docs.readme-md--master/<lang>.md
+file_filter = README-<lang>.md
 source_lang = en
 type = GITHUBMARKDOWN
 
