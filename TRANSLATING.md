@@ -12,11 +12,13 @@ Make sure to have the following tools installed:
 - Sphinx
 - sphinx-rtd-theme
 - Transifex CLI
+- gettext
 
 Installation instructions for macOS:
 ```shell
 $ pip3 install sphinx sphinx-rtd-theme
 $ pip3 install transifex-client
+$ brew install gettext
 ```
 
 Contact one of the Baikonur Organisation owners for a Transifex account and API keys necessary for translations updates.
@@ -42,6 +44,9 @@ $ tx pull
 
 # Changes pushed to branches including master will be automatically deployed to baikonur.dev
 # Your branch should appear as a new version in version switcher in the bottom-left
+
+# 6. In case .mo files are not updated correctly, try following command to rebuild .mo locally
+$ find ./ -name '*.po' | sed 's/^.\/\///' | sed 's/.po$//' | xargs -I% sh -c 'msgcat %.po | msgfmt -o %.mo -' 
 ```
 
 ## For more information
