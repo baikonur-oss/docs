@@ -38,10 +38,6 @@ Contents
    subprojects/eden
 
 
-License
--------
-.. include:: ../../LICENSE
-
 Indices and tables
 ==================
 
