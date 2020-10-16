@@ -28,7 +28,7 @@ Contact one of the Baikonur Organisation owners for a Transifex account and API 
 $ cd docs
 $ sphinx-build -b gettext . _build/gettext
 
-# 2. Push .po and .pot files for translation to Transifex
+# 2. Push .po files for translation to Transifex
 $ tx push -s
 
 # 3. Translate new strings at Transifex
@@ -37,6 +37,8 @@ $ tx push -s
 $ tx pull
 
 # 5. Check if translations are pulled correctly, commit and push changes
+
+# Note: tx pull also creates binary .mo files, make sure to include them as well
 
 # Changes pushed to branches including master will be automatically deployed to baikonur.dev
 # Your branch should appear as a new version in version switcher in the bottom-left
