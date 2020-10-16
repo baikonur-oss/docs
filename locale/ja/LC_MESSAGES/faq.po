@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, CyberAgent, Inc.
+# Copyright (C) 2019-2020, The Baikonur OSS Project
 # This file is distributed under the same license as the Baikonur package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Torgayev Tamirlan <torgayev@me.com>, 2020
+# Tamirlan Torgayev, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 02:28+0900\n"
-"PO-Revision-Date: 2020-03-31 19:25+0000\n"
-"Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
+"POT-Creation-Date: 2020-10-16 18:55+0900\n"
+"PO-Revision-Date: 2020-10-16 10:13+0000\n"
+"Last-Translator: Tamirlan Torgayev, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,4 +70,4 @@ msgstr "コントリビュータ/メンテナ/コアメンバーになるには�
 
 #: ../../faq.rst:25 ba69e8c8131b4ba0903fa275677eceeb
 msgid "You do not *have to*. :)"
-msgstr "その *必要* はありません*。"
+msgstr "*必要* ありません。"

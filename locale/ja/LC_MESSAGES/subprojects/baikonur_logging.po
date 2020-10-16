@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, CyberAgent, Inc.
+# Copyright (C) 2019-2020, The Baikonur OSS Project
 # This file is distributed under the same license as the Baikonur package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Torgayev Tamirlan <torgayev@me.com>, 2020
+# Tamirlan Torgayev, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Baikonur\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 03:25+0900\n"
-"PO-Revision-Date: 2020-03-17 05:48+0000\n"
-"Last-Translator: Torgayev Tamirlan <torgayev@me.com>, 2020\n"
+"POT-Creation-Date: 2020-10-16 18:55+0900\n"
+"PO-Revision-Date: 2020-10-16 10:13+0000\n"
+"Last-Translator: Tamirlan Torgayev, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/baikonur/teams/108107/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "前提条件"
 
 #: ../../subprojects/baikonur_logging.rst:10 bbdd00a3f7d641d5b9953c7e2d75c2fe
 msgid "Why Kinesis?"
-msgstr "なぜKinesis?"
+msgstr "なぜKinesisを活用するのか?"
 
 #: ../../subprojects/baikonur_logging.rst:12 d4b578b5138148e2bee22eb0188fc875
 msgid ""
@@ -58,7 +58,7 @@ msgstr ""
 
 #: ../../subprojects/baikonur_logging.rst:22 f884afb55f544dab934acab36a722fdd
 msgid "Why Kinesis with Lambda?"
-msgstr "なぜKinesisとLambda?"
+msgstr "なぜKinesis上のデータをLambdaで処理するのか?"
 
 #: ../../subprojects/baikonur_logging.rst:24 2101c3e06a064a3087217ee1a9dcb4ce
 msgid ""
@@ -88,7 +88,7 @@ msgid ""
 "without errors."
 msgstr ""
 "イベントソースマッピングでは、Kinesis Data "
-"Stream上の処理済みデータの位置が自動的に管理されます（ポジション管理）。各シャードでどの位置までのデータが正常に処理済みかが記録されます。Lambdaの実行ががエラーなしで完了した場合にのみ、位置が更新されます。"
+"Stream上の処理済みデータの位置が自動的に管理されます。各シャードでどの位置までのデータが正常に処理されたかが記録されます。Lambdaの実行ががエラーなしで完了した場合にのみ、位置が更新されます。"
 
 #: ../../subprojects/baikonur_logging.rst:35 1fe6f3b6cf8f4f0db41975be9729cfc6
 msgid ""
@@ -140,7 +140,7 @@ msgid ""
 "Streams in conjunction with one or more of the following Baikonur Logging "
 "Lambda modules:"
 msgstr ""
-"「Baikonurログ周りアーキテクチャ」とは、Kinesis Data "
+"「Baikonurログ周り構成」とは、Kinesis Data "
 "Streamsと次のBaikonurログ周りLambdaモジュールを1つ以上の組み合わせを使っているものを指す。"
 
 #: ../../subprojects/baikonur_logging.rst:58 626495d630384989ad96d83a3bfa09db
@@ -299,8 +299,8 @@ msgid ""
 "is a value in the type field, and each output stream represents a "
 "subscription group::"
 msgstr ""
-"一つのKinesisストリーム(「ルーター」、「親ストリーム」)にデータを書き込みます。さらに、転送先ごとに出力ストリームを作成します。転送モジュール "
-"( terraform-aws-lambda-kinesis-forward_ )を追加しホワイトリスを設定することで、 `出版-購読型モデル "
+"ルータと呼ばれる一つのKinesisのストリームにデータを書き込みます。さらに、転送先ごとに出力ストリームを作成します。転送モジュール "
+"(terraform-aws-lambda-kinesis-forward_)を追加しホワイトリスを設定することで、 `出版-購読型モデル "
 "<https://ja.wikipedia.org/wiki/出版-購読型モデル>`_ "
 "に類似したアーキテクチャを作成できます。ここで、トピックはデータ種類識別子であり、出力ストリームは購読グループを表します::"
 
