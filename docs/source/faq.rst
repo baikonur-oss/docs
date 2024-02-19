@@ -18,8 +18,3 @@ Is this project limited to Terraform Modules?
 Absolutely not. Although Baikonur Project started as a platform for open sourcing internally used Terraform Modules,
 we have been creating Python libraries, CLI tools, and we are preparing to publish our infrastructure Knowledge Base.
 
-
-Do I have to be a CyberAgent employee to become a contributor/maintainer/core member?
--------------------------------------------------------------------------------------
-
-You do not *have to*. :)
