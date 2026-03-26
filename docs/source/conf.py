@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Baikonur'
-copyright = '2019-2020, The Baikonur OSS Project'
-author = 'The Baikonur OSS Project contributors'
+copyright = '2019-2026, CyberAgent, Inc. & The Baikonur OSS Project.'
+author = 'CyberAgent, Inc. & The Baikonur OSS Project.'
 
 # -- General configuration ---------------------------------------------------
 
